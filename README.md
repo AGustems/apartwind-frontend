@@ -59,6 +59,7 @@ Method  |     URL                |   Description                                
 ------- | ---------------------- | ------------------------------------------------------------ |
 GET     | /rooms                 |  Get the list of all the rooms in the database               |
 GET     | /rooms/:id             |  Get the data of a particular room of the database           |
+GET     | /rooms/add             |  Get the form to add a new room in the database              |
 POST    | /rooms/add             |  Create a new room in the database                           |
 PUT     | /rooms/:id/edit        |  Edit the data of an existing room (only authorised user)    |
 DELETE  | /rooms/:id/delete      |  Delete the room data of the database (only authorised user) | 

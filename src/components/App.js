@@ -1,11 +1,14 @@
 import React from 'react';
+import {Switch, Route} from 'react-router-dom'
 
-function App() {
-  return (
-    <h1>
-      Roomer
-    </h1>
-  );
+import Home from './views/Home'
+
+const App = (props) => {
+    return (
+        <Switch>
+            <Route exact path='/' render={(props) => <Home/>}/>
+        </Switch>
+    );
 }
 
 export default App;
