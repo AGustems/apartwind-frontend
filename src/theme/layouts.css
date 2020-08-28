@@ -38,14 +38,16 @@
     margin: 5% 0 0 0;
 }
 
-
-.banner-form {
-    display: flex;
+.banner-form{
     background: #fff;
     margin: 0 5%;
-    padding: 0 5% 10%;
+    padding: 0 8% 15%;
     border-radius: 0 0 15px 15px;
     text-align: center;
+}
+
+.banner-headding {
+    display: flex;
 }
 
 .form-logo {
@@ -63,5 +65,6 @@
 }
 
 .container-login>img{
-    width: 100%;
+    padding-top:15%;
+    width: 90%;
 }
