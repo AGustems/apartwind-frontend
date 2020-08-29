@@ -16,16 +16,16 @@ const Signup = (props) => {
         email: '',
         password: '',
         description: '',
-        //location: {},
         char:'',
         characteristics: [],
         socials: {
             facebook: '',
-            twitter: '',
+            twitter: '', 
             instagram: ''
         },
         page: 0
     }
+
     const [userSignup,
         setUserSignup] = useState(initialState)
 
@@ -37,7 +37,6 @@ const Signup = (props) => {
         const email = userSignup.email
         const password = userSignup.password
         const description = userSignup.description
-        // const location = userSignup.location
         const characteristics = userSignup.characteristics
         const socials = userSignup.socials
 
@@ -49,7 +48,6 @@ const Signup = (props) => {
             email,
             password,
             description,
-            //location,
             characteristics,
             socials
         }, {withCredentials: true}).then(response => {
@@ -68,7 +66,7 @@ const Signup = (props) => {
         setUserSignup(userSignup => ({
             ...userSignup,
             socials : {
-                ... userSignup.socials,
+                ...userSignup.socials,
                 [target.name]:target.value
             }
         }))
@@ -250,7 +248,7 @@ const Signup = (props) => {
                                 onChange={e => handleChangeObject(e)}
                             />
                         </div>}
-                    image="/images/signup-4.png"
+                    image="/images/signup-5.png"
                     littleInfo={<div className="submit-signup">
                         <button className="faux-button" onClick={changePageBack}>Back</button>
                         <button className="faux-button" onClick={handleSubmit}>Send</button>

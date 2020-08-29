@@ -59,3 +59,12 @@
 .input-text::placeholder {
     color: white;
 }
+
+/* COMMON NAVBAR */
+.navbar{
+    display:flex;
+}
+
+.navbar img{
+    height:50px;
+}
