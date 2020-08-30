@@ -257,3 +257,73 @@
     padding: 26% 5% 8%;
     justify-content: space-between;
 }
+
+/* EDIT PROFILE VIEW */
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.edit-form>label{
+    width:80%;
+    text-align: left;
+    margin-top:20px;
+}
+
+.edit-form>.input-text-bg{
+    margin-top: 6px;
+}
+
+.edit-form>textarea{
+    margin-top:6px;
+    width:85%;
+}
+
+.edit-submit{
+    margin-top:30px;
+    border: none;
+    border-radius:20px;
+    background-color:#DEF2F1;
+    color:#2B7A78;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.edit-char{
+    margin: 0;
+    padding: 3% 0;
+    color: #2B7A78;
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.edit-char button{
+    border: none;
+    border-radius: 20px;
+    background-color:#DEF2F1;
+    color:#2B7A78;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* DELETE PROFILE VIEW */
+.delete-account{
+    border: none;
+    border-radius: 20px;
+    background-color:#f74d4d;
+    color:white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-text{
+    margin-top:20px;
+    padding-bottom:22px
+}

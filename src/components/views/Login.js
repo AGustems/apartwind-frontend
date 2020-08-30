@@ -21,7 +21,8 @@ const Login = (props) => {
             email,
             password
         }, {withCredentials: true}).then(response => {
-            props.setUserSession(response.data)
+            props.setUserSession(response.data);
+            props.history.push("/userprofile")
         }).catch(err => console.log('Something went wrong when sending the login information', err))
     }
 
