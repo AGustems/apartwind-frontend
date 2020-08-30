@@ -6,7 +6,6 @@ import Form from '../layouts/Form'
 import InputText from '../common/InputText'
 import AgeSlider from '../common/AgeSlider'
 
-
 const Signup = (props) => {
     const initialState = {
         name: '',
@@ -51,7 +50,8 @@ const Signup = (props) => {
             characteristics,
             socials
         }, {withCredentials: true}).then(response => {
-            props.setUserSession(response.data)
+            props.setUserSession(response.data);
+            props.history.push("/userprofile")
         }).catch(err => console.log('Something went wrong when sending the signup information', err))
     }
 
@@ -106,7 +106,7 @@ const Signup = (props) => {
         </div>
     )
     
-    const showChar = userSignup.characteristics.map(char => <h4 className="title-inline">{char}</h4>)
+    const showChar = userSignup.characteristics.map(char => <h4 key={char} className="title-inline">{char}</h4>)
 
     if(userSignup.page === 0){
         return (

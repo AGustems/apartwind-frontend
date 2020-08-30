@@ -63,8 +63,15 @@
 /* COMMON NAVBAR */
 .navbar{
     display:flex;
+    position:fixed;
+    bottom: 0;
+    left:0;
+    right:0;
+    justify-content: space-around;
+    background-color: #17252A;
+    padding:5px;
 }
 
 .navbar img{
-    height:50px;
+    height:30px;
 }

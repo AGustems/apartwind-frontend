@@ -1,10 +1,12 @@
-import React, {useState} from 'react';
-import {Switch, Route} from 'react-router-dom';
+import React, {useState} from 'react'
+import {Switch, Route} from 'react-router-dom'
 
 import Home from './views/Home'
 import Login from './views/Login'
 import Signup from './views/Signup'
-import NavBar from './common/NavBar';
+import UserProfile from './views/UserProfile'
+import EditProfile from './views/EditProfile'
+import DeleteProfile from './views/DeleteProfile'
 
 const App = () => {
     const initialState = {
@@ -26,7 +28,9 @@ const App = () => {
                 exact
                 path='/auth/signup'
                 render={(props) => <Signup {...props} setUserSession={setUserSession}/>}/>
-            <Route exact path='/test' render={(props) => <NavBar {...props} userInSession={userInSession}/>}/>
+            <Route exact path='/userprofile' render={(props) => <UserProfile {...props} userInSession={userInSession}/>}/>
+            <Route path='/userprofile/:id/delete' render={(props) => <DeleteProfile {...props} userInSession={userInSession}/>}/>
+            <Route path='/userprofile/:id' render={(props) => <EditProfile {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
         </Switch>
     );
 }
