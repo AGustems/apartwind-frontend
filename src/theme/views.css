@@ -1,4 +1,4 @@
-/*Home*/
+/* HOME VIEW */
 .container-intro {
     margin: 0;
     padding: 0;
@@ -6,8 +6,8 @@
     background-image: url("/images/home1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    height: 100vh;
 }
 
 .container-intro > h2 {
@@ -15,7 +15,8 @@
     font-size: 36px;
     font-weight: bold;
     text-align: right;
-    padding: 220px 25px 0 0;
+    padding-top: 40%;
+    padding-right: 25px;
     text-shadow: 1px 1px 10px black;
 }
 
@@ -29,64 +30,64 @@
 
 .container-intro > h3 {
     font-size: 26px;
-    padding:40px 0 0 30px;
+    padding: 40px 0 0 30px;
     text-shadow: 1px 1px 10px black;
 }
 
 .container-intro > p {
     font-size: 18px;
-    padding: 10px 30px 0 30px;
+    padding: 10px 30px 0;
     text-shadow: 1px 1px 10px black;
 }
 
-.button-containerh{
-    display:flex;
+.button-containerh {
+    display: flex;
     justify-content: space-around;
     margin-top: 60px;
 }
 
-.button-white{
+.button-white {
     color: white;
     font-size: 24px;
     border: 2px solid white;
     border-radius: 30px;
     width: 130px;
-    text-align:center;
-    padding: 2px 0 5px 0;
+    text-align: center;
+    padding: 2px 0 5px;
     box-shadow: 1px 1px 10px black;
 }
 
-.button-white>a{
+.button-white > a {
     text-decoration: none;
     color: white;
 }
 
-.container-features{
+.container-features {
     margin: 0;
-    padding: 0;
+    padding: 0 0 15px;
     background-image: url("/images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    height: 100%;
 }
 
-.container-features>h1{
-    font-size:52px;
+.container-features > h1 {
+    font-size: 52px;
     color: white;
     text-shadow: 1px 1px 10px #17252A;
     text-align: center;
-    padding: 40px 0 20px 0; 
+    padding: 40px 0 20px;
 }
 
-.container-callact{
+.container-callact {
     margin: 0;
     padding: 0;
     background-image: url("/images/bghero.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    height: 100vh;
 }
 
 .container-callact > h2 {
@@ -98,9 +99,161 @@
     text-shadow: 1px 1px 10px black;
 }
 
-.button-containerv{
+.button-containerv {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:60px;
+    margin-top: 60px;
+}
+
+/* LOGIN VIEW */
+/* --> If I can include social login to the app
+.container-login > h2 {
+    width: 90%;
+    text-align: center;
+    border-bottom: 2px solid #17252A;
+    line-height: 0.1em;
+    margin: 30px 5% 50px 5%;
+}
+
+.container-login > h2 > span {
+    background: #fff;
+    padding: 0 10px;
+}*/
+
+.container-login > h3 {
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 10px #17252A;
+    text-align: center;
+    margin: 10% 0 5% 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-submit{
+    width:100%;
+    text-align:right;
+    padding: 20px 18% 0 0
+}
+
+.input-submit{
+    color: white;
+    font-weight: bold;
+    font-size:14px;
+    padding: 8px;
+    width:20%;
+    background-color:#17252A;
+    border: none;
+    border-radius: 30px;
+    text-align:center;
+    box-shadow: 1px 1px 20px white;
+}
+
+.w-link{
+    color:white
+}
+
+/* SIGNUP VIEW */
+.banner-content{
+    display:flex;
+    flex-direction: column;
+    justify-items:center;
+    align-items: center;
+    align-content:center;
+}
+
+.register-container{
+    padding: 10% 0 21% 0;
+}
+.register-button {
+    width: 75%;
+    font-size: 1em;
+    border:none;
+    border-radius:20px;
+    background-color:#17252A;
+    color:white;
+    padding:10px;
+}
+
+.form-controllers{
+    display: flex;
+    padding: 38% 5% 8%;
+    justify-content: space-between;
+}
+
+.faux-button{
+    background:transparent;
+    border:none;
+    font-size: 1.3em;
+}
+
+.age-banner{
+    width:60%;
+    border-radius:20px;
+    padding:8%;
+    font-size:1.3em;
+    color:white;
+    background-color:#17252A;
+}
+
+.input-big {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid white;
+    border-radius:20px;
+    outline: 0;
+    font-size: 0.8em;
+    background-color:#17252A;
+    color:white;
+    font-family: 'Verdana';
+    padding: 7px 12px;
+    transition: border-color 0.2;
+}
+
+.input-big::placeholder {
+    color: white;
+    font-family: 'Verdana';
+    padding: 6px 12px;
+}
+
+.char-form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.char-submit{
+    height: 40px;
+    color:white;
+    margin-top: 10px;
+    padding: 0 15px;
+    border: none;
+    font-size:24px;
+    border-radius:60px;
+    background-color: #17252A;
+}
+
+.container-char{
+    width: 100%;
+    margin-top:20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-inline{
+    margin: 0 10px 5px 0;
+    padding:10px;
+    background-color: #DEF2F1;
+    color:#2B7A78;
+    border-radius: 20px;
+}
+
+.submit-signup{
+    display: flex;
+    padding: 26% 5% 8%;
+    justify-content: space-between;
 }
