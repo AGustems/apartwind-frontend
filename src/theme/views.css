@@ -357,3 +357,13 @@
 .buttons-h>button{
     margin: 10px;
 }
+
+.add-publi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-publi>textarea{
+    margin-top: 10px;
+}

@@ -110,8 +110,20 @@ input::-webkit-calendar-picker-indicator {
 
 /* COMMON MAP */
 .map {
-    height: 200px;
     width: 100%;
-    margin: 5px 0;
-    border: 2px solid lightgray;
+    height:200px;
+    margin: 5px 0 25px 0;
 }
+
+.map-form{
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+::-webkit-file-upload-button {
+    background: #DEF2F1;
+    color: #2B7A78;
+    border:none;
+    border-radius: 10px;
+    padding:5px
+  }

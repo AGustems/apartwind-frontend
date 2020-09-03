@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import GoogleMapReact from 'google-map-react'
 import axios from 'axios'
+import InputText from "./InputText"
 require('dotenv').config()
 
 const Map = (props) => {
@@ -47,7 +48,7 @@ const Map = (props) => {
     const getMapOptions = (maps) => {
         return {
             disableDefaultUI: false,
-            mapTypeControl: true,
+            mapTypeControl: false,
             streetViewControl: false,
             styles: [
                 {
@@ -78,15 +79,13 @@ const Map = (props) => {
     return (
         <div className='map'>
             <form className='map-form' onSubmit={handleSubmit}>
-                <label>Address</label>
-                <input
+                <InputText
                     type="text"
-                    className="form-control"
                     placeholder="Please, write the address"
                     name="search"
                     value={state.search}
                     onChange={handleChange}/>
-                <input type="submit" name="submit" value="Search"/>
+                <input type="submit" name="submit" value="+" className="char-submit"/>
             </form>
 
             <GoogleMapReact
