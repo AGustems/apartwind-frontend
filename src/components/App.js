@@ -8,6 +8,7 @@ import UserProfile from './views/UserProfile'
 import EditProfile from './views/EditProfile'
 import DeleteProfile from './views/DeleteProfile'
 import AddRoom from './views/AddRoom'
+import RoomsList from './views/RoomsList'
 
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
             <Route path='/userprofile/:id/delete' render={(props) => <DeleteProfile {...props} userInSession={userInSession}/>}/>
             <Route path='/userprofile/:id' render={(props) => <EditProfile {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
             <Route exact path='/rooms/add' render={(props) => <AddRoom {...props} userInSession={userInSession}/>}/>
+            <Route exact path='/rooms' render={(props) => <RoomsList {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
         </Switch>
     );
 }
