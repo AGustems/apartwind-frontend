@@ -327,3 +327,43 @@
     margin-top:20px;
     padding-bottom:22px
 }
+
+/* ADD ROOM VIEW */
+.only-controller{
+    display: flex;
+    padding: 15% 5% 6%;
+    justify-content: flex-end;
+}
+
+.banner-content>label{
+    width:85%;
+    margin-top:15px;
+    font-weight: bold;
+    color: #17252A;
+    text-align: left; 
+}
+
+.banner-content>hr{
+    margin: 15px 0 0 0;
+    width:85%;
+    border: 1.5px solid #17252A;
+}
+
+.buttons-h{
+    display: flex;
+    width:85%
+}
+
+.buttons-h>button{
+    margin: 10px;
+}
+
+.add-publi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-publi>textarea{
+    margin-top: 10px;
+}

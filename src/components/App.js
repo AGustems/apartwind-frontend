@@ -7,6 +7,8 @@ import Signup from './views/Signup'
 import UserProfile from './views/UserProfile'
 import EditProfile from './views/EditProfile'
 import DeleteProfile from './views/DeleteProfile'
+import AddRoom from './views/AddRoom'
+
 
 const App = () => {
     const initialState = {
@@ -31,6 +33,7 @@ const App = () => {
             <Route exact path='/userprofile' render={(props) => <UserProfile {...props} userInSession={userInSession}/>}/>
             <Route path='/userprofile/:id/delete' render={(props) => <DeleteProfile {...props} userInSession={userInSession}/>}/>
             <Route path='/userprofile/:id' render={(props) => <EditProfile {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
+            <Route exact path='/rooms/add' render={(props) => <AddRoom {...props} userInSession={userInSession}/>}/>
         </Switch>
     );
 }
