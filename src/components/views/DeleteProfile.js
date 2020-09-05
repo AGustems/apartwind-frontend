@@ -21,7 +21,7 @@ function DeleteProfile(props) {
                     access to your account</p>
                     <button className="delete-account" onClick={handleDelete}>Delete account</button>
             </div>)}
-            littleInfo={(<div className="footer-text"><p>If you are not sure about your decision...</p><Link className="w-link" to="/userprofile">Go Back</Link></div>)}
+            littleInfo={(<div className="footer-text"><p>If you are not sure about your decision...</p><Link className="w-link" to={`/userprofile/${props.userInSession._id}`}>Go Back</Link></div>)}
             />)
     } else {
         return( <h1>You are not authorised to see this page</h1>)

@@ -37,7 +37,7 @@ const AddRoom = (props) => {
             parking: false,
             balcony: false,
             garden: false,
-            daccess: false
+            daccess: false,
         },
         tolerance: {
             guys: false,
@@ -126,7 +126,7 @@ const AddRoom = (props) => {
             files: target.files
         }))
     }
-
+    
     const handleSmokersClick = () => {
         setRoomState(roomState => ({
             ...roomState,
