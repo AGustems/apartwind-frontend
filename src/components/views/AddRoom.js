@@ -57,7 +57,6 @@ const AddRoom = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(roomState.files)
         const formData = new FormData ()
         formData.append("owner", props.userInSession._id)
         formData.append("property", roomState.property)
@@ -80,7 +79,6 @@ const AddRoom = (props) => {
 
         axios.post('http://localhost:5000/rooms/add', formData, {withCredentials:true})
             .then((response) => {
-                console.log(response.data)
                 props.history.push("/")
             }).catch(err => console.log('Something went wrong when sending the room information', err))
     }
@@ -149,15 +147,19 @@ const AddRoom = (props) => {
             <button className="faux-button" onClick={changePageNext}>Next</button>
         </div>
     )
-
-    if (roomState.page === 0) {
+    
+    if(props.userInSession.loggedInUser){
+        return(
+            <h1>User no authorized</h1>
+        )
+    } else if (roomState.page === 0) {
         return <Form    title="Property" 
                         subtitle="Please, choose the property type" 
                         content={
                             <div className='banner-content'>
-                                <button className={(roomState.property === 'house') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('house')}>House</button>
-                                <button className={(roomState.property === 'flat') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('flat')}>Flat</button>
-                                <button className={(roomState.property === 'other') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('other')}>Other</button>
+                                <button className={(roomState.property === 'House') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('House')}>House</button>
+                                <button className={(roomState.property === 'Flat') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('Flat')}>Flat</button>
+                                <button className={(roomState.property === 'Other') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('Other')}>Other</button>
                             </div>}
                         image="/images/room/room-form1.png"
                         littleInfo={<div className="only-controller" style={{marginTop: "50px"}}>
