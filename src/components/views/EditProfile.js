@@ -47,7 +47,7 @@ const EditProfile = (props) =>{
         axios.put(`http://localhost:5000/userprofile/${props.match.params.id}`, updateData, {withCredentials:true})
             .then((response) => {
                 props.setUserSession(response.data)
-                props.history.push("/userprofile")
+                props.history.push(`/userprofile/${props.match.params.id}`)
             }).catch(err => console.log('Something went wrong when sending the signup information', err))
     }
 

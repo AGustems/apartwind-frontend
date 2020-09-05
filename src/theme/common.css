@@ -63,6 +63,33 @@
     box-shadow: 1px 1px 5px gray;
 }
 
+.button-light-little {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2B7A78;
+    padding: 5px;
+    width: 30%;
+    background-color: #DEF2F1;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.button-dark-little {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2B7A78;
+    padding: 5px;
+    width: 30%;
+    background-color: #17252A;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 5px gray;
+}
+
+
 /* COMMON INPUT TYPE TEXT*/
 .input-text-bg {
     width: 75%;
@@ -147,7 +174,7 @@ input::-webkit-calendar-picker-indicator {
     height: 100%;
 }
 
-.room-img > img {
+.room-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -197,4 +224,10 @@ input::-webkit-calendar-picker-indicator {
     font-size: 26px;
     background-color: transparent;
     border: none;
+}
+
+.room-data>h5>span>a{
+    text-decoration: none;
+    margin-left: 10px;
+    color: #2B7A78;
 }

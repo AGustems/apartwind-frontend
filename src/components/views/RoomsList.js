@@ -6,7 +6,7 @@ import NavBar from '../common/NavBar'
 
 const RoomsList = (props) => {
     const [rooms,
-        setRooms] = useState({roomsList:[]})
+        setRooms] = useState({roomsList: []})
 
     useEffect(() => {
         axios
@@ -17,6 +17,7 @@ const RoomsList = (props) => {
                     roomsList: response.data
                 }))
             })
+            .catch(err => console.log("Error while trying to get the rooms information: ", err))
     }, [])
 
     const showRooms = rooms
@@ -28,11 +29,11 @@ const RoomsList = (props) => {
             _id={room._id}
             roomImg={room.images[0]}
             ownerImg={room.owner.imageUrl}
+            ownerId={room.owner._id}
             ownerName={room.owner.name}
             ownerSurname={room.owner.surname}
             address={room.location.direction}
-            price={room.price}    
-            />)
+            price={room.price}/>)
 
     return (
         <main className="rooms-page">
@@ -43,7 +44,7 @@ const RoomsList = (props) => {
                 <p>Future Filters?</p>
             </div>
             {showRooms}
-            <NavBar />
+            <NavBar userInSession={props.userInSession}/>
         </main>
     )
 }

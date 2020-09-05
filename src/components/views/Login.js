@@ -22,7 +22,7 @@ const Login = (props) => {
             password
         }, {withCredentials: true}).then(response => {
             props.setUserSession(response.data);
-            props.history.push("/userprofile")
+            props.history.push("/userprofile/" + response.data._id)
         }).catch(err => console.log('Something went wrong when sending the login information', err))
     }
 
