@@ -73,14 +73,21 @@ const AddRoom = (props) => {
         formData.append("tolerance", JSON.stringify(roomState.tolerance))
         formData.append("title", roomState.title)
         formData.append("description", roomState.description)
-        for(const key of Object.keys(roomState.files)){
-            formData.append("images", roomState.files[key])
+        if(roomState.files !== null){
+            for(const key of Object.keys(roomState.files)){
+                formData.append("images", roomState.files[key])
+            }
+        } else {
+            formData.append("images", roomState.images)
         }
 
         axios.post('http://localhost:5000/rooms/add', formData, {withCredentials:true})
-            .then((response) => {
+            .then(() => {
                 props.history.push("/")
-            }).catch(err => console.log('Something went wrong when sending the room information', err))
+            }).catch(err => setRoomState(roomState => ({
+                ...roomState,
+                errorMessage: err.response.data.message
+            })))
     }
     
     const handleChange = ({target}) => {
@@ -157,6 +164,7 @@ const AddRoom = (props) => {
                         subtitle="Please, choose the property type" 
                         content={
                             <div className='banner-content'>
+                                {(roomState.property === '') ? <h6 className="error-little">The property type is required to post the advert</h6> : null}
                                 <button className={(roomState.property === 'House') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('House')}>House</button>
                                 <button className={(roomState.property === 'Flat') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('Flat')}>Flat</button>
                                 <button className={(roomState.property === 'Other') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickP('Other')}>Other</button>
@@ -180,6 +188,7 @@ const AddRoom = (props) => {
                                 onChange={e => handleChange(e)}
                             />
                             <label>Monthly cost</label>
+                            {(roomState.price === '') ? <h6 className="error-little">The monthly cost is required to post the advert</h6> : null}
                             <InputText
                                 type="number"
                                 placeholder="Price"
@@ -189,6 +198,7 @@ const AddRoom = (props) => {
                             />
                             <hr/>
                             <label>Room size</label>
+                            {(roomState.size === '') ? <h6 className="error-little">The room size is required to post the advert</h6> : null}
                             <div className="buttons-h">
                                 <button className={(roomState.size === 'individual') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickS('individual')}>Individual</button>
                                 <button className={(roomState.size === 'double') ? 'button-dark-forms' : 'button-light-forms'} onClick={() => handleClickS('double')}>Double</button>
@@ -302,7 +312,8 @@ const AddRoom = (props) => {
                                     rows="7"
                                     value={roomState.description}
                                     onChange={e => handleChange(e)}
-                                    className="input-big"></textarea>                        
+                                    className="input-big"></textarea>
+                        {roomState.errorMessage ? <h6 className="error">Error: {roomState.errorMessage} </h6> : null}                        
                     </div>}
                     image="/images/room/room-form9.png"
                     littleInfo={<div className="submit-signup">

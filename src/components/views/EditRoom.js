@@ -37,8 +37,10 @@ const EditRoom = (props) => {
                 description: response.data.description,
             })
         })
-        .catch(err => console.log("Error while trying to retrieve the room data"))
-    }, [props.match.params.id])
+        .catch(err => setRoomState(roomState => ({
+            ...roomState,
+            errorMessage: err.response.data.message
+        })))}, [props.match.params.id])
     
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -65,10 +67,12 @@ const EditRoom = (props) => {
         formData.append("description", roomState.description)
 
         axios.put(`http://localhost:5000/rooms/${props.match.params.id}/edit`, formData, {withCredentials:true})
-            .then((response) => {
+            .then(() => {
                 props.history.push(`/userprofile/${props.userInSession._id}`)
-            }).catch(err => console.log('Something went wrong when sending the room updated information', err))
-
+            }).catch(err => setRoomState(roomState => ({
+                ...roomState,
+                errorMessage: err.response.data.message
+            })))
     }
 
     const handleClickP = property => {
@@ -421,6 +425,7 @@ const EditRoom = (props) => {
                                             onChange={e => handleChange(e)}
                                             className="input-big"></textarea>                        
                             </div>
+                            {roomState.errorMessage ? <h6 className="error">Error: {roomState.errorMessage} </h6> : null}
                             <input className="edit-submit" type="button" onClick={handleSubmit} value="Save changes"/>
                         </div>
                     }
