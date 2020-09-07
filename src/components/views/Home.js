@@ -3,6 +3,8 @@ import '../../theme/views.css';
 
 import Button from '../common/ButtonLink'
 import Feature from '../layouts/Feature'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {fas} from '@fortawesome/free-solid-svg-icons'
 
 const Home = (props) => {
     return (
@@ -22,6 +24,7 @@ const Home = (props) => {
                         buttonText="Log in"
                         />
                 </div>
+                <p className="scroll-call">Scroll down to know more <FontAwesomeIcon icon={fas.faArrowDown}/></p>
             </section>
             <section className="container-features">
                 <h1>Why Roomer?</h1>

@@ -1,19 +1,23 @@
 import React, {useState, useEffect} from 'react'
 import GoogleMapReact from 'google-map-react'
+import Carousel from 'react-bootstrap/Carousel';
+
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {fas} from '@fortawesome/free-solid-svg-icons'
 import {far} from '@fortawesome/free-regular-svg-icons'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
+
+import NavBar from '../common/NavBar'
 
 const RoomDetails = (props) => {
     const [room,
-        setRoom] = useState({loading: true})
+        setRoom] = useState({loading: true, counter: 0})
 
     useEffect(() => {
         axios
             .get(`http://localhost:5000/rooms/${props.match.params.id}`)
             .then(response => {
-                console.log(response.data)
                 setRoom(() => (response.data))
             }).catch(err => setRoom(state => ({
                 ...state,
@@ -67,11 +71,14 @@ const RoomDetails = (props) => {
             </h1>
         )
     } else {
+        const carouselImages = room.images.map(item => <Carousel.Item key={item}>
+            <img className="room-carr" alt="room" src={item}/>
+        </Carousel.Item>)
         return (
             <main className="container-rdetails">
                 <section className="room-images">
-                    <img className="room-carr" alt={room.title} src={room.images[0]}/>
-                    <img className="room-avt" alt={room.owner.name} src={room.owner.imageUrl}/>
+                    <Carousel>{carouselImages}</Carousel>
+                    <Link to={`/user/${room.owner._id}`}><img className="room-avt" alt={room.owner.name} src={room.owner.imageUrl}/></Link>
                 </section>
                 <section className="room-title-fav">
                     <h1>{room.title}</h1>
@@ -148,6 +155,7 @@ const RoomDetails = (props) => {
                 <section className="room-owner">
                     <p className="room-description">{room.owner.description}</p>
                 </section>
+                <NavBar userInSession={props.userInSession}/>
             </main>
         )
     }

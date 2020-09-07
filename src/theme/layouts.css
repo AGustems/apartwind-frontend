@@ -27,7 +27,7 @@
 /*FORM LAYOUT*/
 .container-login {
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     text-align: center;
     background-image: url("/images/bg.png");
     background-repeat: no-repeat;
@@ -62,13 +62,29 @@
 }
 
 .form-title {
+    width:80%;
     margin-top: 15%;
-    font-size: 1.2em;
+}
+
+.form-title>h1 {
+    width:100%;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.form-title>h3 {
+    font-size: 1em;
+    margin-bottom: 30px;
 }
 
 .container-login > img {
     padding-top: 15%;
     width: 90%;
+}
+
+.banner-content>h4{
+    font-size: 1em;
+    margin-top: 10px
 }
 
 /*USER LAYOUT*/
@@ -118,21 +134,26 @@
 }
 
 .user-title > h2 {
+    font-size: 1.2em;
     margin: 8% 0 0;
 }
 
 .user-title > h4 {
+    font-size: 0.9em;
     margin: 5% 0;
     color: #2B7A78;
 }
 
 .user-title>a{
+    display: block;
+    text-decoration: underline;
+    font-size: 0.9em;
     color: #2B7A78;
 }
 
 .user-title>h2>span>a>img{
-    margin-left:10px;
-    height:18px;
+    margin: 0 0 6px 10px;
+    height:14px;
 }
 
 .social-links {
@@ -171,6 +192,7 @@
 }
 
 .characteristics-list > h2 {
+    font-size: 1.3em;
     margin: 5% 0 0;
 }
 
@@ -224,10 +246,12 @@
 
 .list-check{
     color: green;
+    margin: 0px 10px;
 }
 
 .list-cross{
     color: red;
+    margin: 0px 10px;
 }
 
 /* FLATMATES LAYOUT */
@@ -241,6 +265,7 @@
 }
 
 .flatmate-banner>h4{
+    font-size: 1em;
     margin: 0 0 10px 0;
     color: #2B7A78;
 }
@@ -251,7 +276,6 @@
     background: #17252A;
     border-radius: 15px;
     padding: 20px 50px;
-    width: 20%;
     margin: 0 0 10px 0;
 }
 
@@ -261,7 +285,6 @@
 }
 
 .flatmate-buttons>input{
-    font-size: 28px;
     border: none;
     border-radius: 40px;
     width: 40px;

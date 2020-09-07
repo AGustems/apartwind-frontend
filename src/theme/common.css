@@ -166,6 +166,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .room-data > hr{
+    margin: 4px;
     border: 1px solid #DEF2F1;
 }
 
@@ -189,13 +190,14 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .room-data img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
-    border-radius: 70px;
+    border-radius: 60px;
 }
 
 .room-data > h5{
+    font-size: 0.8em;
     margin: 5px;
     color: #17252A;
 }
@@ -206,6 +208,7 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .room-data > h6 {
+    font-size: 0.7em;
     margin: 5px;
     color: #2B7A78;
     font-weight: normal;
@@ -239,7 +242,57 @@ input::-webkit-calendar-picker-indicator {
 }
 
 .error-little{
+    font-size: 0.7em;
     margin: 5px 0 0 0;
     text-align:left;
     color: #AC3B61;
+}
+
+/* SEARCH BAR */
+.container-search{
+    width: 70%;
+    margin-top: 15px;
+    color: white;
+    background: #17252A;
+    padding-left: 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.searchbar{
+    background: transparent;
+    text-decoration: underline;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+}
+
+.searchbar::placeholder{
+    color: white;
+    text-decoration: underline
+}
+
+/* ORDER BOX */
+.rooms-page>h6{
+    font-size: 0.8em;
+    width: 80%;
+    margin: 15px 0 5px 0;
+    color: #17252A;
+}
+
+.container-order{
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    width: 85%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.container-order h6{
+    font-size: 0.8em;
+    margin: 8px;
+    font-weight: normal;
+    color: #17252A
 }

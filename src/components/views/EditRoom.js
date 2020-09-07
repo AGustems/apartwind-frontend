@@ -153,7 +153,7 @@ const EditRoom = (props) => {
                                 <button className={(roomState.size === 'individual') ? 'button-dark-little' : 'button-light-little'} onClick={() => handleClickS('individual')}>Individual</button>
                                 <button className={(roomState.size === 'double') ? 'button-dark-little' : 'button-light-little'} onClick={() => handleClickS('double')}>Double</button>
                             </div>
-                            <h4>Pictures</h4>
+                            <h4>Pictures (1MB max each)</h4>
                             <div className="input-text-bg">
                                 <input
                                     className="input-text" 

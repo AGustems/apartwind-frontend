@@ -108,7 +108,7 @@ const EditProfile = (props) =>{
                     image="/images/signup-2.png"
                     content={(
                         <form className="edit-form" onSubmit={handleSubmit}>
-                            <label>User profile image</label>
+                            <label>User profile image (1MB max)</label>
                             <InputText
                                 type="file"
                                 name="imageUrl"
