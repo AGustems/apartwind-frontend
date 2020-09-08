@@ -35,7 +35,7 @@
     overflow-x: hidden;
 }
 .container-login > p {
-    padding-bottom: 12%;
+    padding-bottom: 5%;
     margin: 5% 0 0;
 }
 
@@ -43,7 +43,7 @@
     background: #fff;
     box-shadow: 2px 2px 15px gray;
     margin: 0 5%;
-    padding: 0 8% 15%;
+    padding: 0 8% 10%;
     border-radius: 0 0 15px 15px;
     text-align: center;
 }
@@ -62,17 +62,17 @@
 }
 
 .form-title {
-    width:80%;
+    width: 80%;
     margin-top: 15%;
 }
 
-.form-title>h1 {
-    width:100%;
+.form-title > h1 {
+    width: 100%;
     font-size: 2em;
     margin-bottom: 15px;
 }
 
-.form-title>h3 {
+.form-title > h3 {
     font-size: 1em;
     margin-bottom: 30px;
 }
@@ -82,9 +82,9 @@
     width: 90%;
 }
 
-.banner-content>h4{
+.banner-content > h4 {
     font-size: 1em;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 /*USER LAYOUT*/
@@ -99,7 +99,7 @@
 
 .container-userinfo {
     width: 100%;
-    height: 100%;
+    min-height:100vh;
     padding-bottom: 70px;
     background-image: url("/images/bg.png");
     background-repeat: no-repeat;
@@ -129,8 +129,8 @@
     object-fit: cover;
 }
 
-.user-title{
-    padding-bottom:5%;
+.user-title {
+    padding-bottom: 5%;
 }
 
 .user-title > h2 {
@@ -144,16 +144,16 @@
     color: #2B7A78;
 }
 
-.user-title>a{
+.user-title > a {
     display: block;
     text-decoration: underline;
     font-size: 0.9em;
     color: #2B7A78;
 }
 
-.user-title>h2>span>a>img{
+.user-title > h2 > span > a > img {
     margin: 0 0 6px 10px;
-    height:14px;
+    height: 14px;
 }
 
 .social-links {
@@ -180,7 +180,7 @@
     height: 60px;
 }
 
-.characteristics-list{
+.characteristics-list {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -188,7 +188,7 @@
     border-radius: 20px;
     box-shadow: 2px 2px 15px gray;
     margin: 6%;
-    padding: 5px 10px 15px 5px;;
+    padding: 5px 10px 15px 5px;
 }
 
 .characteristics-list > h2 {
@@ -206,85 +206,84 @@
     -moz-columns: 2;
 }
 
-.container-adsfavs{
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-}
-
-.container-adsfavs>h2{
-    width:85%;
-    margin:30px 0 0 0;
-}
-
-
-/* AMENITIES LAYOUT */
-.container-amenities{
+.container-adsfavs {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.amenity-feature{
-    display:flex;
+.container-adsfavs > h2 {
+    width: 85%;
+    margin: 30px 0 0;
+}
+
+/* AMENITIES LAYOUT */
+.container-amenities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amenity-feature {
+    display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0;
     padding: 0;
 }
 
-.amenity-feature>h6{
+.amenity-feature > h6 {
     margin: 10px 0;
     font-size: 14px;
     font-weight: normal;
     color: #2B7A78;
 }
 
-.list-icon{
-    margin-right: 10px
+.list-icon {
+    margin-right: 10px;
 }
 
-.list-check{
+.list-check {
     color: green;
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
-.list-cross{
+.list-cross {
     color: red;
-    margin: 0px 10px;
+    margin: 0 10px;
 }
 
 /* FLATMATES LAYOUT */
-.flatmate-content{
+.flatmate-content {
     display: flex;
     justify-content: space-around;
 }
 
-.flatmate-banner{
+.flatmate-banner {
     width: 45%;
 }
 
-.flatmate-banner>h4{
+.flatmate-banner > h4 {
     font-size: 1em;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
     color: #2B7A78;
 }
 
-.flatmate-banner>h1{
+.flatmate-banner > h1 {
     font-size: 32px;
     color: white;
     background: #17252A;
     border-radius: 15px;
     padding: 20px 50px;
-    margin: 0 0 10px 0;
+    margin: 0 0 10px;
 }
 
-.flatmate-buttons{
+.flatmate-buttons {
     display: flex;
     justify-content: space-around;
 }
 
-.flatmate-buttons>input{
+.flatmate-buttons > input {
     border: none;
     border-radius: 40px;
     width: 40px;
@@ -294,3 +293,159 @@
 }
 
 /* ERROR 403 LAYOUT */
+
+/* RESPONSIVE RESIZE (IPAD) */
+@media screen and (min-width: 600px) {
+    .feature {
+        margin: 50px 0 0;
+    }
+
+    .feature-icon > img {
+        height: 100px;
+    }
+
+    .feature h3 {
+        font-size: 30px;
+        margin: 15px;
+    }
+
+    .feature p {
+        font-size: 1.3em;
+        margin: 0 60px 25px;
+    }
+
+    .form-logo {
+        padding-top: 20px;
+    }
+
+    .form-logo > img {
+        height: 100px;
+    }
+    .form-title {
+        margin-top: 10%;
+    }
+
+    .form-title > h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+
+    .form-title > h3 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .container-login > img {
+        padding-top: 60px;
+        width: 55%;
+    }
+
+    .container-login > p {
+        font-size: 1.3em;
+    }
+
+    .amenity-feature > h6 {
+        font-size: 22px;
+    }
+
+    .flatmate-banner {
+        width: 37%;
+    }
+
+    .flatmate-banner > h4 {
+        font-size: 1.3em;
+    }
+
+    .flatmate-banner > h1 {
+        font-size: 3.3em;
+    }
+
+    .flatmate-buttons > input {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+
+    .banner-content > h4 {
+        font-size: 1.3em;
+    }
+
+    .user-img > img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .user-title > h2 {
+        font-size: 2em;
+        margin: 12% 0 0;
+    }
+
+    .user-title > h4 {
+        font-size: 1.5em;
+        margin: 5% 0;
+    }
+
+    .user-title > a {
+        font-size: 1.2em;
+    }
+
+    .user-title > h2 > span > a > img {
+        margin: 0 0 10px 10px;
+        height: 24px;
+    }
+
+    .user-presentation{
+        margin: 3% 6%;
+    }
+
+    .user-presentation>p{
+        font-size: 1.3em;
+    }
+
+    .social-links{
+        padding: 2% 10%;
+    }
+
+    .social-links img {
+        height: 90px;
+    }
+
+    .characteristics-list > h2 {
+        font-size: 2.3em;
+        margin: 5% 0 0;
+    }
+
+    .characteristics-list > ul {
+        font-size: 1.5em;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+
+    .container-adsfavs > h2 {
+        width: 80%;
+        margin: 30px 0 15px;
+        font-size: 2.2em;
+    }
+}
+
+/* RESPONSIVE RESIZE (DESKTOP) */
+@media screen and (min-width: 1200px) {
+    .feature {
+        margin: 30px 0 0;
+    }
+
+    .feature-icon > img {
+        height: 70px;
+    }
+
+    .feature h3 {
+        font-size: 28px;
+        margin: 15px;
+    }
+
+    .feature p {
+        font-size: 1em;
+        margin: 0 60px 25px;
+    }
+}

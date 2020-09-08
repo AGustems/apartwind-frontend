@@ -28,6 +28,7 @@ const Home = (props) => {
             </section>
             <section className="container-features">
                 <h1>Why Roomer?</h1>
+                <div className="features-h">
                 <Feature
                     image="/images/clock.png"
                     alt="time"
@@ -49,6 +50,7 @@ const Home = (props) => {
                     featureText="Filter by location, price, range,bedroom count,
                                 pet-friendly and save your favourites so that you
                                 don't miss your opportunity."/>
+                </div>
             </section>
             <section className="container-callact">
                 <h2>Start searching for your ideal roommate</h2>
