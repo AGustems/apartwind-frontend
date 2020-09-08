@@ -34,9 +34,9 @@ const User = (props) => {
                         <p>{user.description}</p>
                     </div>
                     <div className="social-links">
-                        <a href={user.socials ? user.socials.facebook : "https://www.facebook.com/"}><img alt="facebook" src="/icons/facebook.png"/></a>
-                        <a href={user.socials ? user.socials.twitter : "https://www.twitter.com/"}><img alt="twitter" src="/icons/twitter.png"/></a>
-                        <a href={user.socials ? user.socials.instagram : "https://www.instagram.com/"}><img alt="instagram" src="/icons/instagram.png"/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={user.socials ? `https://${user.socials.facebook}` : '/'}><img alt="facebook" src="/icons/facebook.png"/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={user.socials ? `https://${user.socials.twitter}` : '/'}><img alt="twitter" src="/icons/twitter.png"/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={user.socials ? `https://${user.socials.instagram}` : '/'}><img alt="instagram" src="/icons/instagram.png"/></a>
                     </div>
                 </section>
                 <section className="characteristics-list">

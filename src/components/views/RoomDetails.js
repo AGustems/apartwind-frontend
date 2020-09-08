@@ -13,8 +13,12 @@ const RoomDetails = (props) => {
         axios
             .get(`http://localhost:5000/rooms/${props.match.params.id}`)
             .then(response => {
+                console.log(response.data)
                 setRoom(() => (response.data))
-            })
+            }).catch(err => setRoom(state => ({
+                ...state,
+                errorMessage: err.response.data.message
+            })))
     }, [props.match.params.id])
 
     const handleFavClick = () => {
@@ -47,8 +51,8 @@ const RoomDetails = (props) => {
     const renderMarkers = (map, maps) => {
         let marker = new maps.Marker({
             position: {
-                lat: room.location.lat,
-                lng: room.location.lng
+                lat: parseFloat(room.location.lat),
+                lng: parseFloat(room.location.lng)
             },
             map,
             title: room.location.direction
@@ -132,8 +136,8 @@ const RoomDetails = (props) => {
                         key: process.env.REACT_APP_API_GOOGLE
                     }}
                         defaultCenter={{
-                        lat: room.location.lat,
-                        lng: room.location.lng
+                        lat: parseFloat(room.location.lat),
+                        lng: parseFloat(room.location.lng)
                     }}
                         defaultZoom={15}
                         options={getMapOptions}

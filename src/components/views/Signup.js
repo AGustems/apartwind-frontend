@@ -51,8 +51,11 @@ const Signup = (props) => {
             socials
         }, {withCredentials: true}).then(response => {
             props.setUserSession(response.data);
-            props.history.push("/userprofile")
-        }).catch(err => console.log('Something went wrong when sending the signup information', err))
+            props.history.push(`/userprofile/${response.data._id}`)
+        }).catch(err => setUserSignup(userSignup => ({
+            ...userSignup,
+            errorMessage: err.response.data.message
+        })))
     }
 
     const handleChange = ({target}) => {
@@ -128,6 +131,7 @@ const Signup = (props) => {
                     subtitle="We want to know you!"
                     content={
                         <div className="banner-content">
+                            {(userSignup.name === '') ? <h6 className="error-little">The name is required to sign up </h6> : null}
                             <InputText
                                 type="text"
                                 name="name"
@@ -135,6 +139,7 @@ const Signup = (props) => {
                                 value={userSignup.name}
                                 onChange={e => handleChange(e)}
                             />
+                            {(userSignup.surname === '') ? <h6 className="error-little">The surname is required to sign up </h6> : null}
                             <InputText 
                                 type="text"
                                 name="surname"
@@ -149,6 +154,7 @@ const Signup = (props) => {
                                 value={userSignup.occupation}
                                 onChange={e => handleChange(e)}
                             />
+                            
                         </div>}
                     image="/images/signup-1.png"
                     littleInfo={controllers}
@@ -202,6 +208,7 @@ const Signup = (props) => {
                     subtitle="This is the information for the login"
                     content={
                         <div className="banner-content">
+                            {(userSignup.email === '') ? <h6 className="error-little">The email is required to sign up </h6> : null}
                             <InputText
                                 type="text"
                                 name="email"
@@ -209,6 +216,7 @@ const Signup = (props) => {
                                 value={userSignup.email}
                                 onChange={e => handleChange(e)}
                             />
+                            {(userSignup.password === '') ? <h6 className="error-little">The password is required to sign up </h6> : null}
                             <InputText 
                                 type="password"
                                 name="password"
@@ -247,6 +255,7 @@ const Signup = (props) => {
                                 value={userSignup.socials.instagram}
                                 onChange={e => handleChangeObject(e)}
                             />
+                            {userSignup.errorMessage ? <h6 className="error">Error: {userSignup.errorMessage} </h6> : null}
                         </div>}
                     image="/images/signup-5.png"
                     littleInfo={<div className="submit-signup">

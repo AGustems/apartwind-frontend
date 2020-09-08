@@ -12,6 +12,7 @@ const EditProfile = (props) =>{
             occupation: props.userInSession.occupation,
             age: props.userInSession.age,
             description: props.userInSession.description,
+            emailValid: true,
             email: props.userInSession.email,
             socials: {
                 facebook: props.userInSession.socials.facebook,
@@ -48,7 +49,10 @@ const EditProfile = (props) =>{
             .then((response) => {
                 props.setUserSession(response.data)
                 props.history.push(`/userprofile/${props.match.params.id}`)
-            }).catch(err => console.log('Something went wrong when sending the signup information', err))
+            }).catch(err => setUserEdit(userEdit => ({
+                ...userEdit,
+                errorMessage: err.response.data.message
+            })))
     }
 
     const handleChangeObject = ({target}) => {
@@ -130,7 +134,7 @@ const EditProfile = (props) =>{
                             <InputText
                                 type="text"
                                 name="occupation"
-                                placeholder="occupation"
+                                placeholder="Occupation"
                                 value={userEdit.occupation}
                                 onChange={e => handleChange(e)}
                             />
@@ -160,7 +164,6 @@ const EditProfile = (props) =>{
                             ></textarea>
                             
                             <label>Characteristics</label>
-                            <h3>Pending :D</h3>
                             <div className="char-form">
                                 <InputText  type="text"  
                                             name="char"
@@ -174,7 +177,6 @@ const EditProfile = (props) =>{
                             <ul className="edit-char">
                                 {showChar}
                             </ul>
-
 
                             <label>Socials</label>
                             <InputText
@@ -198,6 +200,7 @@ const EditProfile = (props) =>{
                                 value={userEdit.socials.instagram}
                                 onChange={e => handleChangeObject(e)}
                             />
+                            {userEdit.errorMessage ? <h6 className="error">Error: {userEdit.errorMessage} </h6> : null}
                             <input className="edit-submit" type="submit" value="Save changes"/>
                         </form>
                     )}

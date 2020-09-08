@@ -27,22 +27,33 @@ const Map = (props) => {
         axios
             .get('http://localhost:5000/maps?search=' + state.search)
             .then(response => {
-                setState(state => ({
-                    ...state,
-                    lat: response.data.candidates[0].geometry.location.lat,
-                    lng: response.data.candidates[0].geometry.location.lng,
-                    direction: response.data.candidates[0].formatted_address
-                }))
-                props.setState(state => ({
-                    ...state,
-                    location: {
+                if(response.data.candidates.length < 1){
+                    setState(state => ({
+                        ...state,
+                        errorMessage: 'Please provide a valid address'
+                    }))
+                } else {
+                    setState(state => ({
+                        ...state,
                         lat: response.data.candidates[0].geometry.location.lat,
                         lng: response.data.candidates[0].geometry.location.lng,
                         direction: response.data.candidates[0].formatted_address
-                    }
-                }))
+                    }))
+    
+                    props.setState(state => ({
+                        ...state,
+                        location: {
+                            lat: response.data.candidates[0].geometry.location.lat,
+                            lng: response.data.candidates[0].geometry.location.lng,
+                            direction: response.data.candidates[0].formatted_address
+                        }
+                    }))
+                }
             })
-            .catch(err => console.log('Something went wrong when trying to retrieve the data from the provided address'))
+            .catch(err => setState(state => ({
+                ...state,
+                errorMessage: err.response.data.message
+            })))
     }
 
     const getMapOptions = (maps) => {
@@ -87,7 +98,7 @@ const Map = (props) => {
                     onChange={handleChange}/>
                 <input type="submit" name="submit" value="+" className="char-submit"/>
             </form>
-
+            {state.errorMessage ? <h6 className="error">Error: {state.errorMessage} </h6> : null}
             <GoogleMapReact
                 key={state.direction}
                 bootstrapURLKeys={{

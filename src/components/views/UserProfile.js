@@ -55,9 +55,9 @@ function UserProfile(props) {
                         <p>{props.userInSession.description}</p>
                     </div>
                     <div className="social-links">
-                        <a href={props.userInSession.facebook}><img alt="facebook" src="/icons/facebook.png"/></a>
-                        <a href={props.userInSession.twitter}><img alt="twitter" src="/icons/twitter.png"/></a>
-                        <a href={props.userInSession.instagram}><img alt="instagram" src="/icons/instagram.png"/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={props.userInSession.socials ? `https://${props.userInSession.socials.facebook}` : '/'}><img alt="facebook" src="/icons/facebook.png"/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={props.userInSession.socials ? `https://${props.userInSession.socials.twitter}` : '/'}><img alt="twitter" src="/icons/twitter.png"/></a>
+                        <a target="_blank" rel="noopener noreferrer" href={props.userInSession.socials ? `https://${props.userInSession.socials.instagram}` : '/'}><img alt="instagram" src="/icons/instagram.png"/></a>
                     </div>
                 </section>
                 <section className="characteristics-list">

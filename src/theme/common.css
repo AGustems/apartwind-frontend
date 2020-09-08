@@ -231,3 +231,15 @@ input::-webkit-calendar-picker-indicator {
     margin-left: 10px;
     color: #2B7A78;
 }
+
+.error{
+    margin: 20px 0 0 0;
+    text-align:left;
+    color: #AC3B61;
+}
+
+.error-little{
+    margin: 5px 0 0 0;
+    text-align:left;
+    color: #AC3B61;
+}
