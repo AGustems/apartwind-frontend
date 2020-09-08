@@ -48,6 +48,9 @@ function UserProfile(props) {
                         {props.match.params.id
                             ? <Link to={`${props.match.params.id}/edit`}>Edit profile</Link>
                             : null}
+                        {props.match.params.id
+                        ? <Link to={`/auth/logout`}>Log out</Link>
+                        : null}
                     </div>
                 </section>
                 <section className="user-description">
@@ -79,7 +82,7 @@ function UserProfile(props) {
                             ownerId={props.userInSession._id}
                             ownerImg={props.userInSession.imageUrl}
                             ownerName={props.userInSession.name}
-                            ownerSurname={props.userInSession.surname}
+                            ownerAge={props.userInSession.age}
                             address={room.location.direction}
                             price={room.price}/>)}
                 </section>
@@ -96,7 +99,7 @@ function UserProfile(props) {
                             ownerId={room.owner._id}
                             ownerImg={room.owner.imageUrl}
                             ownerName={room.owner.name}
-                            ownerSurname={room.owner.surname}
+                            ownerAge={room.owner.age}
                             address={room.location.direction}
                             price={room.price}/>)}
                     </section>

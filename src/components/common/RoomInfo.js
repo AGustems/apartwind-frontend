@@ -31,7 +31,7 @@ function RoomInfo(props) {
                                 : <FontAwesomeIcon icon={far.faHeart}/>}
                         </button>}
                 </div>
-                <h5>{props.ownerName} {props.ownerSurname}
+                <h5>{props.ownerName}, {props.ownerAge}
                     {(props.ownerId === props.userInSession._id)
                         ? <span>
                                 <Link to={`/rooms/edit/${props._id}`}><FontAwesomeIcon icon={far.faEdit}/></Link>

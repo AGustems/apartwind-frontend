@@ -13,6 +13,7 @@ import RoomDetails from './views/RoomDetails'
 import AddRoom from './views/AddRoom'
 import RoomsList from './views/RoomsList'
 import User from './common/User'
+import Logout from './views/Logout'
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
     return (
         <Switch>
             <Route exact path='/' render={(props) => <Home {...props} userInSession={userInSession}/>}/>
+            <Route exact path='/auth/logout' render={(props) => <Logout {...props} setUserSession={setUserSession}/>}/>
             <Route
                 exact
                 path='/auth/login'

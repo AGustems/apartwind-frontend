@@ -40,6 +40,13 @@
     text-shadow: 1px 1px 10px black;
 }
 
+.scroll-call {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: right;
+}
+
 .button-containerh {
     display: flex;
     justify-content: space-around;
@@ -64,20 +71,20 @@
 
 .container-features {
     margin: 0;
-    padding: 0 0 15px;
+    padding: 0 0 10px;
     background-image: url("/images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 }
 
-.container-features > h1 {
+.container-features h1 {
     font-size: 52px;
     color: white;
     text-shadow: 1px 1px 10px #17252A;
     text-align: center;
-    padding: 40px 0 20px;
+    padding: 40px 0 0;
 }
 
 .container-callact {
@@ -87,7 +94,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container-callact > h2 {
@@ -107,20 +114,6 @@
 }
 
 /* LOGIN VIEW */
-/* --> If I can include social login to the app
-.container-login > h2 {
-    width: 90%;
-    text-align: center;
-    border-bottom: 2px solid #17252A;
-    line-height: 0.1em;
-    margin: 30px 5% 50px 5%;
-}
-
-.container-login > h2 > span {
-    background: #fff;
-    padding: 0 10px;
-}*/
-
 .container-login > h3 {
     font-size: 1.5em;
     color: white;
@@ -344,9 +337,8 @@
 }
 
 .banner-content > hr {
-    margin: 15px 0 0;
     width: 85%;
-    border: 1.5px solid #17252A;
+    border: 1px solid #17252A;
 }
 
 .buttons-h {
@@ -377,7 +369,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     padding-bottom: 60px;
 }
 
@@ -391,7 +383,7 @@
     width: 100%;
 }
 
-.container-rdetails>h3{
+.container-rdetails > h3 {
     margin: 40px 0 0 5%;
     color: #17252A;
     font-size: 1.3em;
@@ -422,25 +414,25 @@
     left: 20px;
 }
 
-.room-title-fav{
-    display:flex;
+.room-title-fav {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 40px;
     padding: 0 20px;
 }
 
-.room-title-fav>button{
-    width:30px;
-    height:30px;
+.room-title-fav > button {
+    width: 30px;
+    height: 30px;
     color: #AC3B61;
     font-size: 26px;
     background-color: transparent;
     border: none;
 }
 
-.room-intro{
-    margin:15px 10px;
+.room-intro {
+    margin: 15px 10px;
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
@@ -448,13 +440,15 @@
     box-shadow: 1px 1px 10px gray;
 }
 
-.room-intro>p{
+.room-intro > p {
+    margin: 0;
+    padding: 8px;
     font-size: 0.6em;
     color: #2B7A78;
 }
 
-.room-description{
-    margin:15px 10px;
+.room-description {
+    margin: 15px 10px;
     padding: 10px 15px;
     font-size: 0.8em;
     border-radius: 10px;
@@ -462,15 +456,15 @@
     box-shadow: 1px 1px 10px gray;
 }
 
-.price-contact{
+.price-contact {
     display: flex;
-    margin: 5px 20px; 
+    margin: 5px 20px;
     justify-content: space-between;
     align-items: center;
-    color: #17252A
+    color: #17252A;
 }
 
-.button-contact{
+.button-contact {
     font-size: 1em;
     font-weight: bold;
     padding: 5px;
@@ -483,45 +477,296 @@
     box-shadow: 1px 1px 10px gray;
 }
 
-.room-mainchar{
-    margin:15px 10px;
+.room-mainchar {
+    margin: 15px 10px;
     padding: 1px 15px;
     border-radius: 10px;
     background: white;
     box-shadow: 1px 1px 10px gray;
 }
 
-.room-mainchar>ul{
+.room-mainchar > ul {
     list-style: none;
     padding: 0 5%;
 }
-.room-mainchar li{
+.room-mainchar li {
     margin-top: 7px;
     color: #2B7A78;
 }
 
-.room-location{
-    margin-top:10px;
+.room-location {
+    margin-top: 10px;
     display: flex;
     padding: 0 5%;
     height: 250px;
-    width: 90%;
+    width: 100%;
+}
+
+.room-owner {
+    padding-bottom: 50px;
 }
 
 /* EDIT ROOM VIEW */
-.property-content{
+.property-content {
     display: flex;
     justify-content: space-around;
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
-.container-roomedit h4{
+.container-roomedit h4 {
     margin: 25px 0 5px 10px;
     text-align: left;
 }
 
-.container-roomedit p{
+.container-roomedit p {
     margin: 5px 0;
     text-align: left;
     font-size: 0.8em;
+}
+
+/* RESPONSIVE RESIZE (IPAD) */
+@media screen and (min-width: 600px) {
+    .container-intro > h2 {
+        padding-top: 25%;
+        font-size: 4em;
+        padding-right: 7%;
+    }
+
+    .container-intro > h1 {
+        font-size: 8em;
+        padding-right: 7%;
+    }
+
+    .container-intro > h3 {
+        padding: 100px 0 0 30px;
+        font-size: 2.5em;
+        padding-right: 7%;
+    }
+
+    .container-intro > p {
+        font-size: 1.5em;
+        padding: 10px 30px 0;
+        text-shadow: 1px 1px 10px black;
+    }
+
+    .button-containerh {
+        margin-top: 80px;
+    }
+
+    .button-white {
+        font-size: 30px;
+        width: 35%;
+        padding: 2px 0 5px;
+    }
+
+    .container-features h1 {
+        font-size: 5em;
+    }
+
+    .container-callact > h2 {
+        text-align: center;
+        font-size: 52px;
+        width: 100%;
+        padding: 25% 0;
+    }
+
+    .container-login > h3 {
+        margin: 3%;
+        font-size: 2em;
+    }
+
+    .input-submit {
+        font-size: 20px;
+        width: 25%;
+    }
+
+    .register-container {
+        padding: 5% 0 15%;
+    }
+    .register-button {
+        width: 65%;
+        font-size: 1.3em;
+    }
+
+    .form-controllers {
+        padding: 18% 5% 8%;
+    }
+
+    .char-form {
+        margin: 15px 5%;
+    }
+
+    .container-char {
+        margin: 0 5%;
+    }
+
+    .container-char > h4 {
+        font-size: 1.2em;
+    }
+
+    .banner-content > label {
+        font-size: 1.3em;
+    }
+
+    .submit-signup {
+        font-size: 1.3em;
+    }
+
+    .faux-button {
+        font-size: 1.8em;
+    }
+
+    .container-rdetails > h3 {
+        font-size: 2em;
+    }
+
+    .room-carr {
+        height: 400px;
+    }
+    .room-avt {
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        top: 325px;
+        left: 40px;
+    }
+
+    .room-title-fav {
+        margin-top: 80px;
+        padding: 0 40px;
+    }
+
+    .room-title-fav > button {
+        width: 50px;
+        height: 50px;
+        font-size: 36px;
+    }
+
+    .room-intro {
+        margin: 20px 30px;
+    }
+
+    .room-intro > p {
+        margin: 0;
+        padding: 8px;
+        font-size: 1.2em;
+    }
+
+    .room-description {
+        margin: 20px 30px;
+        font-size: 1.1em;
+    }
+
+    .price-contact {
+        margin: 20px 40px;
+    }
+
+    .button-contact {
+        font-size: 1.4em;
+        width: 30%;
+    }
+
+    .room-mainchar {
+        margin: 20px 30px;
+    }
+
+    .room-mainchar > ul {
+        padding: 2% 5%;
+    }
+    .room-mainchar li {
+        font-size: 1.3em;
+    }
+
+    .room-location {
+        margin-top: 10px;
+        display: flex;
+        padding: 0 5%;
+        height: 400px;
+        width: 100%;
+    }
+}
+
+/* RESPONSIVE RESIZE (DESKTOP) */
+@media screen and (min-width: 1200px) {
+    .container-intro {
+        background: url("/images/home1.png"), #2B7A78;
+        background-position: right, left;
+        background-repeat: no-repeat;
+        background-size: 55% 100%, 45% 100%;
+    }
+
+    .container-intro > h2 {
+        text-align: left;
+        padding: 8% 4% 0;
+        font-size: 3em;
+    }
+
+    .container-intro > h1 {
+        text-align: left;
+        padding: 0 4%;
+        font-size: 8em;
+    }
+    
+    .container-intro > h3 {
+        width: 40%;
+        padding: 1% 4%;
+        font-size: 2.5em;
+    }
+
+    .container-intro > p {
+        width: 40%;
+        padding: 0 4%;
+        font-size: 1.6em;
+    }
+
+    .scroll-call{
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .button-containerh{
+        margin-top: 4%;
+        width: 45%;
+    }
+
+    .button-white{
+        font-size: 1.8em;
+        border-radius: 50px;
+    }
+
+    .container-features{
+        min-height: 50vh;
+    }
+
+    .container-features>h1{
+        font-size: 4em;
+    }
+
+    .features-h{
+        display: flex;
+    }
+
+    .container-callact{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 50vh;
+        width: 100%;
+        background:url("/images/bghero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container-callact>h2{
+        font-size: 3.1em;
+        text-align: left;
+        padding: 0 5%;
+        width: 50%;
+    }
+
+    .button-containerv{
+        align-items: flex-end;
+        margin: 0 5%;
+        width: 50%;
+    }
 }

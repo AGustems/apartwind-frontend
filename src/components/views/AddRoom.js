@@ -215,7 +215,7 @@ const AddRoom = (props) => {
                     subtitle="Can you show us the room?"
                     content={
                         <div className="banner-content">
-                            <label>Pictures</label>
+                            <label>Pictures (1MB max each)</label>
                             <div className="input-text-bg">
                                 <input
                                     className="input-text" 
@@ -291,7 +291,7 @@ const AddRoom = (props) => {
     } else if (roomState.page === 7){
         return(
             <Form   title="Looking for..."
-                    subtitle="I'm happy to live with..."
+                    subtitle="I'll be happy to live with..."
                     content={<Tolerances roomState={roomState} setRoomState={setRoomState}/>}
                     image="/images/room/room-form8.png"
                     littleInfo={controllers}
