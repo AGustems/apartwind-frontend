@@ -585,4 +585,10 @@
         margin-top: 0;
         height: 100%;
     }
+
+    .footer-text{
+        position: absolute;
+        bottom: 5%;
+        width:50%;
+    }
 }

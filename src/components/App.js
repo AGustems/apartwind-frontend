@@ -15,7 +15,6 @@ import RoomsList from './views/RoomsList'
 import User from './common/User'
 import Logout from './views/Logout'
 
-
 const App = () => {
     const initialState = {
         loggedInUser: {
