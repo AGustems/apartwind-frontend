@@ -104,8 +104,8 @@ const Signup = (props) => {
 
     const controllers = (
         <div className="form-controllers">
-            <button className="faux-button" onClick={changePageBack}>Back</button>
-            <button className="faux-button" onClick={changePageNext}>Next</button>
+            <button className="faux-button-l" onClick={changePageBack}>Back</button>
+            <button className="faux-button-r" onClick={changePageNext}>Next</button>
         </div>
     )
     
@@ -259,8 +259,8 @@ const Signup = (props) => {
                         </div>}
                     image="/images/signup-5.png"
                     littleInfo={<div className="submit-signup">
-                        <button className="faux-button" onClick={changePageBack}>Back</button>
-                        <button className="faux-button" onClick={handleSubmit}>Send</button>
+                        <button className="faux-button-l" onClick={changePageBack}>Back</button>
+                        <button className="faux-button-r" onClick={handleSubmit}>Send</button>
                     </div>}
             />
         )

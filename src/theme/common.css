@@ -135,6 +135,10 @@ input::-webkit-calendar-picker-indicator {
     height: 30px;
 }
 
+.navbar-title{
+    display: none;
+}
+
 /* COMMON MAP */
 .map {
     width: 100%;
@@ -388,5 +392,51 @@ input::-webkit-calendar-picker-indicator {
         padding: 5px;
         width: 60%;
         box-shadow: 1px 1px 10px #17252A;
+    }
+
+    .container-roomlist{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .room-item {
+        display: flex;
+        width: 45%;
+    }
+
+    .searchbar{
+        width: 90%;
+    }
+
+    .navbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: flex-start;
+        height: 5%;
+    }
+
+    .navbar>div{
+        margin: 0 2%;
+    }
+    
+    .navbar img {
+        display: none;
+        height: 30px;
+    }
+    
+    .navbar-title{
+        display: inline;
+        text-decoration: none;
+        color: white;
+    }
+
+    .container-search{
+        margin-top: 5%;
+    }
+
+    .navbar h3{
+        margin: 0 5%;
     }
 }

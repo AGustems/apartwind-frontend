@@ -139,7 +139,7 @@ const RoomsList = (props) => {
                 }}> Allows smokers <FontAwesomeIcon icon={fas.faArrowDown}/></h6>
             </div>
             </div>) : null}
-            {showRooms}
+            <div className="container-roomlist">{showRooms}</div>
             <NavBar userInSession={props.userInSession}/>
         </main>
     )

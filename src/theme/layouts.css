@@ -448,4 +448,141 @@
         font-size: 1em;
         margin: 0 60px 25px;
     }
+
+    .banner-form {
+        width: 50%;
+        margin: 0 2%;
+        padding: 0 8% 5%;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+    }
+
+    .container-login>h3{
+        width: 50%;
+    }
+
+    .login-form{
+        width:50%;
+    }
+
+    .container-login > img {
+        position: absolute;
+        margin: 10% 5% 0;
+        top: 0;
+        right: 0;
+        width: 35%;
+    }
+
+    .container-login>p{
+        width: 50%;
+        padding: 0 0 2% 5%;
+    }
+
+    .banner-top{
+        width: 40%;
+        padding: 0 2% 2%;
+        height: 100%; 
+    }
+
+    .container-userprofile{
+        display:flex;
+        flex-wrap: wrap;
+        margin-top: 2.5%;
+    }
+
+    .user-img{
+        padding-top: 5%;
+    }
+
+    .user-img > img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .user-description{
+        width: 40%;
+        margin: 1% 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-presentation{
+        width:100%;
+        margin-top: 2%;
+    }
+
+    .user-title > a {
+        display: inline;
+        font-size: 0.9em;
+        margin: 0 5%;
+    }
+
+    .social-links {
+        padding: 2% 5%;
+        width: 90%
+    }
+
+    .characteristics-list{
+        width: 100%;
+        margin: 2% 5% 2%;
+        padding: 2%;
+    }
+
+    .characteristics-list>h2{
+        margin: 0;
+    }
+
+    .characteristics-list > ul {
+        width: 75%;
+        padding: 2%;
+        columns: 7;
+        -webkit-columns: 7;
+        -moz-columns: 7;
+    }
+
+    .characteristics-list>ul>li{
+        font-size: 0.7em;
+    }
+
+    .container-adsfavs {
+        width: 50%;
+    }
+
+    .container-adsfavs > h2 {
+        width: 85%;
+        margin: 2% 0;
+    }
+
+    .container-userinfo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-userinfo>.user-description{
+        height:55%;
+    }
+
+    .container-userinfo>.banner-top{
+        margin-top: 2%;
+        width: 40%;
+    }
+
+    .container-userinfo>.user-description{
+        margin-top:3%;
+    }
+
+    .container-userinfo .user-presentation>p{
+        font-size: 1em;
+    }
+
+    .container-userinfo .social-links>a>img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .container-userinfo>.characteristics-list{
+        margin-top: 0;
+        height: 100%;
+    }
 }
