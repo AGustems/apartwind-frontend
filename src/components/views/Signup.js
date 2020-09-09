@@ -6,6 +6,9 @@ import Form from '../layouts/Form'
 import InputText from '../common/InputText'
 import AgeSlider from '../common/AgeSlider'
 
+import Error404 from '../common/Error404'
+import Error500 from '../common/Error500'
+
 const Signup = (props) => {
     const initialState = {
         name: '',
@@ -264,6 +267,10 @@ const Signup = (props) => {
                     </div>}
             />
         )
+    } else if (userSignup.page > 6){
+        return(<Error404/>)
+    } else {
+        return(<Error500 />)
     }
 }
 

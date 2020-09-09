@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 import NavBar from './NavBar'
+import Error500 from './Error500'
 import '../../theme/layouts.css'
 
 const User = (props) => {
@@ -48,9 +49,8 @@ const User = (props) => {
                 <NavBar userInSession={props.userInSession}/>
             </div>
         )
-
     } else {
-        return (<h2>Error</h2>)
+        return (<Error500 />)
     }
 }
 

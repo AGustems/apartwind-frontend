@@ -9,6 +9,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 
 import NavBar from '../common/NavBar'
+import Error500 from '../common/Error500';
 
 const RoomDetails = (props) => {
     const [room,
@@ -67,9 +68,7 @@ const RoomDetails = (props) => {
 
     if (room.loading) {
         return (
-            <h1>
-                Loading
-            </h1>
+            <Error500 />
         )
     } else {
         const carouselImages = room

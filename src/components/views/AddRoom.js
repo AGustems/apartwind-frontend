@@ -9,6 +9,8 @@ import Flatmates from '../layouts/Flatmates'
 import BedBath from '../layouts/BedBath'
 import Tolerances from '../layouts/Tolerances'
 import '../../theme/views.css'
+import Error403 from '../common/Error403'
+import Error500 from '../common/Error500'
 
 const AddRoom = (props) => {
     const initialState = {
@@ -157,7 +159,7 @@ const AddRoom = (props) => {
     
     if(props.userInSession.loggedInUser){
         return(
-            <h1>User no authorized</h1>
+            <Error403 />
         )
     } else if (roomState.page === 0) {
         return <Form    title="Property" 
@@ -322,6 +324,8 @@ const AddRoom = (props) => {
                     </div>}
             />
         )
+    } else {
+        return(<Error500 />)
     }
 }
 

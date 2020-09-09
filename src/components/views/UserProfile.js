@@ -106,8 +106,7 @@ function UserProfile(props) {
                 <NavBar userInSession={props.userInSession}/> 
                 </div>)
     } else {
-        props.history.push("/auth/login")
-        return <Error403 />
+        return (<Error403 />)
     }
 }
 
