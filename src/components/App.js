@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Switch, Route} from 'react-router-dom'
 
 import Home from './views/Home'
@@ -14,6 +14,8 @@ import AddRoom from './views/AddRoom'
 import RoomsList from './views/RoomsList'
 import User from './common/User'
 import Logout from './views/Logout'
+import Offers from './views/Offers'
+import AddOffer from './views/AddOffer'
 import Error404 from './common/Error404'
 
 const App = () => {
@@ -24,6 +26,17 @@ const App = () => {
     }
     const [userInSession,
         setUserSession] = useState(initialState);
+
+    useEffect(() => {
+        const data = localStorage.getItem('user');
+        if(data){
+            setUserSession(JSON.parse(data))
+        }
+    },[])
+    
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(userInSession))
+    });
 
     return (
         <Switch>
@@ -44,8 +57,10 @@ const App = () => {
             <Route exact path='/rooms/add' render={(props) => <AddRoom {...props} userInSession={userInSession}/>}/>
             <Route exact path='/rooms' render={(props) => <RoomsList {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
             <Route exact path='/rooms/:id' render={(props) => <RoomDetails {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
+            <Route exact path='/rooms/:id/newOffer' render={(props) => <AddOffer {...props} userInSession={userInSession}/>}/>
             <Route exact path='/rooms/edit/:id' render={(props) => <EditRoom {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
             <Route exact path='/rooms/delete/:id' render={(props) => <DeleteRoom {...props} userInSession={userInSession}/>}/>
+            <Route exact path='/offers/:id' render={(props) => <Offers {...props} userInSession={userInSession}/>}/>
             <Route component={Error404}/>
         </Switch>
     );
