@@ -241,6 +241,7 @@
 .title-inline {
     margin: 0 10px 5px 0;
     padding: 10px;
+    font-size: 0.7em;
     background-color: #DEF2F1;
     color: #2B7A78;
     border-radius: 20px;
@@ -471,11 +472,14 @@
     padding: 5px;
     width: 30%;
     background-color: #DEF2F1;
-    color: #2B7A78;
     border: none;
     border-radius: 30px;
     text-align: center;
     box-shadow: 1px 1px 10px gray;
+}
+
+.button-contact a {
+    color: #2B7A78;
 }
 
 .room-mainchar {
@@ -523,6 +527,35 @@
     margin: 5px 0;
     text-align: left;
     font-size: 0.8em;
+}
+
+/* OFFERS LIST */
+.offers {
+    background: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.offers-controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    color: white;
+    background-color: #17252A;
+}
+
+.offers-controllers > h4 {
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* RESPONSIVE RESIZE (IPAD) */
@@ -748,7 +781,7 @@
         display: flex;
     }
 
-    .container-adsfavs>.room-item{
+    .container-adsfavs > .room-item {
         width: 90%;
     }
 
@@ -811,13 +844,13 @@
         padding: 0;
     }
 
-    .top-rdetails{
+    .top-rdetails {
         display: flex;
         justify-content: space-between;
     }
 
-    .top-rdetails>div{
-        width:53%;
+    .top-rdetails > div {
+        width: 53%;
         margin-right: 1%;
     }
 
@@ -827,7 +860,7 @@
         font-size: 1.3em;
     }
 
-    .room-images{
+    .room-images {
         width: 45%;
     }
 
@@ -868,7 +901,7 @@
         font-size: 0.9em;
     }
 
-    .price-contact>h1 {
+    .price-contact > h1 {
         font-size: 3.2em;
     }
 
@@ -883,7 +916,7 @@
         margin-top: 7px;
     }
 
-    .container-rdetails h3{
+    .container-rdetails h3 {
         font-size: 1.5em;
     }
 
@@ -899,8 +932,27 @@
         padding-bottom: 50px;
     }
 
-    .room-owner{
+    .room-owner {
         margin: 0 4%;
     }
 
+    .offers {
+        padding-bottom: 40px;
+    }
+
+    .offers-controllers {
+        margin-top: 2.7%;
+        padding-top: 10px;
+    }
+
+    .offers-controllers > h4 {
+        font-weight: normal;
+        font-size: 1.2em;
+    }
+
+    .offers-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

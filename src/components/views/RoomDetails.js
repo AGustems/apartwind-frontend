@@ -107,7 +107,7 @@ const RoomDetails = (props) => {
                             <p className="room-description">{room.description}</p>
                             <div className="price-contact">
                                 <h1>{room.price}€</h1>
-                                <button className="button-contact">Contact</button>
+                                {props.userInSession._id ? <button className="button-contact"><Link to={`${props.match.params.id}/newOffer`}>Contact</Link></button> : null}
                             </div>
                         </section>
                         <h3>Amenities</h3>

@@ -74,7 +74,7 @@ function UserProfile(props) {
                     {(state.adverts === [])
                         ? <h6>You haven't posted any adverts yet</h6>
                         : state.adverts.map(room => <RoomInfo
-                            key={room._id}
+                            key={`${room._id}ad`}
                             userInSession={props.userInSession}
                             setUserSession={props.setUserSession}
                             _id={room._id}
@@ -91,7 +91,7 @@ function UserProfile(props) {
                     {(state.favourites === [])
                         ? <h6>You haven't added any favourites yet</h6>
                         : state.favourites.map(room => <RoomInfo
-                            key={room._id}
+                            key={`${room._id}fav`}
                             userInSession={props.userInSession}
                             setUserSession={props.setUserSession}
                             _id={room._id}

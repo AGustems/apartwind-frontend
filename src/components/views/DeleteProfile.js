@@ -6,10 +6,10 @@ import Form from '../layouts/Form'
 
 function DeleteProfile(props) {
     const handleDelete = () => {
-
         axios.delete(`http://localhost:5000/userprofile/${props.match.params.id}/delete`)
             .then(() => props.history.push('/'))
     }
+    
     if(props.userInSession._id === props.match.params.id){
         return (<Form
             title="Goodbye :("
