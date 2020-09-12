@@ -1,4 +1,4 @@
-/*Home*/
+/* HOME VIEW */
 .container-intro {
     margin: 0;
     padding: 0;
@@ -6,8 +6,8 @@
     background-image: url("/images/home1.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    height: 100vh;
 }
 
 .container-intro > h2 {
@@ -15,7 +15,8 @@
     font-size: 36px;
     font-weight: bold;
     text-align: right;
-    padding: 220px 25px 0 0;
+    padding-top: 40%;
+    padding-right: 25px;
     text-shadow: 1px 1px 10px black;
 }
 
@@ -29,64 +30,71 @@
 
 .container-intro > h3 {
     font-size: 26px;
-    padding:40px 0 0 30px;
+    padding: 40px 0 0 30px;
     text-shadow: 1px 1px 10px black;
 }
 
 .container-intro > p {
     font-size: 18px;
-    padding: 10px 30px 0 30px;
+    padding: 10px 30px 0;
     text-shadow: 1px 1px 10px black;
 }
 
-.button-containerh{
-    display:flex;
+.scroll-call {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: right;
+}
+
+.button-containerh {
+    display: flex;
     justify-content: space-around;
     margin-top: 60px;
 }
 
-.button-white{
+.button-white {
     color: white;
     font-size: 24px;
     border: 2px solid white;
     border-radius: 30px;
     width: 130px;
-    text-align:center;
-    padding: 2px 0 5px 0;
+    text-align: center;
+    padding: 2px 0 5px;
     box-shadow: 1px 1px 10px black;
 }
 
-.button-white>a{
+.button-white > a {
     text-decoration: none;
     color: white;
 }
 
-.container-features{
+.container-features {
     margin: 0;
-    padding: 0;
+    padding: 0 0 10px;
     background-image: url("/images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    min-height: 100vh;
 }
 
-.container-features>h1{
-    font-size:52px;
+.container-features h1 {
+    font-size: 52px;
     color: white;
     text-shadow: 1px 1px 10px #17252A;
     text-align: center;
-    padding: 40px 0 20px 0; 
+    padding: 40px 0 0;
 }
 
-.container-callact{
+.container-callact {
     margin: 0;
     padding: 0;
     background-image: url("/images/bghero.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 375px;
-    height: 812px;
+    width: 100%;
+    min-height: 100vh;
 }
 
 .container-callact > h2 {
@@ -98,9 +106,853 @@
     text-shadow: 1px 1px 10px black;
 }
 
-.button-containerv{
+.button-containerv {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top:60px;
+    margin-top: 60px;
+}
+
+/* LOGIN VIEW */
+.container-login > h3 {
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 1px 1px 10px #17252A;
+    text-align: center;
+    margin: 10% 0 5%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-submit {
+    width: 100%;
+    text-align: right;
+    padding: 20px 18% 0 0;
+}
+
+.input-submit {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px;
+    width: 20%;
+    background-color: #17252A;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 20px white;
+}
+
+.w-link {
+    color: white;
+}
+
+/* SIGNUP VIEW */
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.register-container {
+    padding: 10% 0 21%;
+}
+.register-button {
+    width: 75%;
+    font-size: 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: #17252A;
+    color: white;
+    padding: 10px;
+}
+
+.form-controllers {
+    display: flex;
+    padding: 38% 5% 8%;
+    justify-content: space-between;
+}
+
+.faux-button-l,
+.faux-button-r {
+    background: transparent;
+    border: none;
+    font-size: 1.3em;
+}
+
+.age-banner {
+    width: 60%;
+    border-radius: 20px;
+    padding: 8%;
+    font-size: 1.3em;
+    color: white;
+    background-color: #17252A;
+}
+
+.input-big {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid white;
+    border-radius: 20px;
+    outline: 0;
+    font-size: 0.8em;
+    background-color: #17252A;
+    color: white;
+    font-family: 'Verdana';
+    padding: 7px 12px;
+    transition: border-color 0.2;
+}
+
+.input-big::placeholder {
+    color: white;
+    font-family: 'Verdana';
+    padding: 6px 12px;
+}
+
+.char-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.char-submit {
+    height: 40px;
+    color: white;
+    margin-top: 10px;
+    padding: 0 15px;
+    border: none;
+    font-size: 24px;
+    border-radius: 60px;
+    background-color: #17252A;
+}
+
+.container-char {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.title-inline {
+    margin: 0 10px 5px 0;
+    padding: 10px;
+    font-size: 0.7em;
+    background-color: #DEF2F1;
+    color: #2B7A78;
+    border-radius: 20px;
+}
+
+.submit-signup {
+    display: flex;
+    padding: 26% 5% 8%;
+    justify-content: space-between;
+}
+
+/* EDIT PROFILE VIEW */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-form > label {
+    width: 80%;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.edit-form > .input-text-bg {
+    margin-top: 6px;
+}
+
+.edit-form > textarea {
+    margin-top: 6px;
+    width: 85%;
+}
+
+.edit-submit {
+    margin-top: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #DEF2F1;
+    color: #2B7A78;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.edit-char {
+    margin: 0;
+    padding: 3% 0;
+    color: #2B7A78;
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.edit-char button {
+    border: none;
+    border-radius: 20px;
+    background-color: #DEF2F1;
+    color: #2B7A78;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* DELETE PROFILE VIEW */
+.delete-account {
+    border: none;
+    border-radius: 20px;
+    background-color: #f74d4d;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-text {
+    margin-top: 20px;
+    padding-bottom: 22px;
+}
+
+/* ADD ROOM VIEW */
+.only-controller {
+    display: flex;
+    padding: 15% 5% 6%;
+    justify-content: flex-end;
+}
+
+.banner-content > label {
+    width: 85%;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #17252A;
+    text-align: left;
+}
+
+.banner-content > hr {
+    width: 85%;
+    border: 1px solid #17252A;
+}
+
+.buttons-h {
+    display: flex;
+    width: 85%;
+}
+
+.buttons-h > button {
+    margin: 10px;
+}
+
+.add-publi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-publi > textarea {
+    margin-top: 10px;
+}
+
+/* ROOMS LIST VIEW */
+.rooms-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+/* ROOM DETAILS VIEW */
+.container-rdetails {
+    margin: 0;
+    padding: 0 0 15px;
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.container-rdetails h3 {
+    margin: 40px 0 0 5%;
+    color: #17252A;
+    font-size: 1.3em;
+}
+
+.room-images {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.room-carr {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.room-avt {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 10px gray;
+    border-radius: 90px;
+    object-fit: cover;
+    top: 195px;
+    left: 20px;
+}
+
+.room-title-fav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.room-title-fav > button {
+    width: 30px;
+    height: 30px;
+    color: #AC3B61;
+    font-size: 26px;
+    background-color: transparent;
+    border: none;
+}
+
+.room-intro {
+    margin: 15px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.room-intro > p {
+    margin: 0;
+    padding: 8px;
+    font-size: 0.6em;
+    color: #2B7A78;
+}
+
+.room-description {
+    margin: 15px 10px;
+    padding: 10px 15px;
+    font-size: 0.8em;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.price-contact {
+    display: flex;
+    margin: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    color: #17252A;
+}
+
+.button-contact {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 5px;
+    width: 30%;
+    background-color: #DEF2F1;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.button-contact a {
+    color: #2B7A78;
+}
+
+.room-mainchar {
+    margin: 15px 10px;
+    padding: 1px 15px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.room-mainchar > ul {
+    list-style: none;
+    padding: 0 5%;
+}
+.room-mainchar li {
+    margin-top: 7px;
+    color: #2B7A78;
+}
+
+.room-location {
+    margin-top: 10px;
+    display: flex;
+    padding: 0 5%;
+    height: 250px;
+    width: 100%;
+}
+
+.room-owner {
+    padding-bottom: 50px;
+}
+
+/* EDIT ROOM VIEW */
+.property-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.container-roomedit h4 {
+    margin: 25px 0 5px 10px;
+    text-align: left;
+}
+
+.container-roomedit p {
+    margin: 5px 0;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+/* OFFERS LIST */
+.offers {
+    background: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.offers-controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    color: white;
+    background-color: #17252A;
+}
+
+.offers-controllers > h4 {
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* RESPONSIVE RESIZE (IPAD) */
+@media screen and (min-width: 600px) {
+    .container-intro > h2 {
+        padding-top: 25%;
+        font-size: 2em;
+        padding-right: 7%;
+    }
+
+    .container-intro > h1 {
+        font-size: 7em;
+        padding-right: 7%;
+    }
+
+    .container-intro > h3 {
+        padding: 100px 0 0 30px;
+        font-size: 2em;
+        padding-right: 7%;
+    }
+
+    .container-intro > p {
+        font-size: 1em;
+        padding: 10px 30px 0;
+        text-shadow: 1px 1px 10px black;
+    }
+
+    .button-containerh {
+        margin-top: 80px;
+    }
+
+    .button-white {
+        font-size: 26px;
+        width: 35%;
+        padding: 2px 0 5px;
+    }
+
+    .container-features h1 {
+        font-size: 5em;
+    }
+
+    .container-callact > h2 {
+        text-align: center;
+        font-size: 52px;
+        width: 100%;
+        padding: 25% 0;
+    }
+
+    .container-login > h3 {
+        margin: 3%;
+        font-size: 2em;
+    }
+
+    .input-submit {
+        font-size: 20px;
+        width: 25%;
+    }
+
+    .register-container {
+        padding: 5% 0 15%;
+    }
+    .register-button {
+        width: 65%;
+        font-size: 1.3em;
+    }
+
+    .form-controllers {
+        padding: 18% 5% 8%;
+    }
+
+    .char-form {
+        margin: 15px 5%;
+    }
+
+    .container-char {
+        margin: 0 5%;
+    }
+
+    .container-char > h4 {
+        font-size: 1.2em;
+    }
+
+    .banner-content > label {
+        font-size: 1.3em;
+    }
+
+    .submit-signup {
+        font-size: 1.3em;
+    }
+
+    .faux-button-l,
+    .faux-button-r {
+        font-size: 1.8em;
+    }
+
+    .container-rdetails > h3 {
+        font-size: 2em;
+    }
+
+    .room-carr {
+        height: 400px;
+    }
+    .room-avt {
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        top: 325px;
+        left: 40px;
+    }
+
+    .room-title-fav {
+        margin-top: 80px;
+        padding: 0 40px;
+    }
+
+    .room-title-fav > button {
+        width: 50px;
+        height: 50px;
+        font-size: 36px;
+    }
+
+    .room-intro {
+        margin: 20px 30px;
+    }
+
+    .room-intro > p {
+        margin: 0;
+        padding: 8px;
+        font-size: 1.2em;
+    }
+
+    .room-description {
+        margin: 20px 30px;
+        font-size: 1.1em;
+    }
+
+    .price-contact {
+        margin: 20px 40px;
+    }
+
+    .button-contact {
+        font-size: 1.4em;
+        width: 30%;
+    }
+
+    .room-mainchar {
+        margin: 20px 30px;
+    }
+
+    .room-mainchar > ul {
+        padding: 2% 5%;
+    }
+    .room-mainchar li {
+        font-size: 1.3em;
+    }
+
+    .room-location {
+        margin-top: 10px;
+        display: flex;
+        padding: 0 5%;
+        height: 400px;
+        width: 100%;
+    }
+}
+
+/* RESPONSIVE RESIZE (DESKTOP) */
+@media screen and (min-width: 1100px) {
+    .container-intro {
+        background: url("/images/home1.png"), #2B7A78;
+        background-position: right, left;
+        background-repeat: no-repeat;
+        background-size: 55% 100%, 45% 100%;
+    }
+
+    .container-intro > h2 {
+        text-align: left;
+        padding: 8% 4% 0;
+        font-size: 3em;
+    }
+
+    .container-intro > h1 {
+        text-align: left;
+        padding: 0 4%;
+        font-size: 7em;
+    }
+
+    .container-intro > h3 {
+        width: 40%;
+        padding: 1% 4%;
+        font-size: 2em;
+    }
+
+    .container-intro > p {
+        width: 40%;
+        padding: 0 4%;
+        font-size: 1.3em;
+    }
+
+    .scroll-call {
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .button-containerh {
+        margin-top: 4%;
+        width: 45%;
+    }
+
+    .button-white {
+        font-size: 1.8em;
+        border-radius: 50px;
+    }
+
+    .container-features {
+        min-height: 50vh;
+    }
+
+    .container-features > h1 {
+        font-size: 4em;
+    }
+
+    .features-h {
+        display: flex;
+    }
+
+    .container-adsfavs > .room-item {
+        width: 90%;
+    }
+
+    .container-callact {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 50vh;
+        width: 100%;
+        background: url("/images/bghero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container-callact > h2 {
+        font-size: 3.1em;
+        text-align: left;
+        padding: 0 5%;
+        width: 50%;
+    }
+
+    .button-containerv {
+        align-items: flex-end;
+        margin: 0 5%;
+        width: 50%;
+    }
+
+    .register-container {
+        width: 50%;
+        padding: 0 0 0 2%;
+    }
+
+    .form-controllers {
+        padding: 16% 5% 0;
+    }
+
+    .faux-button-l {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        margin: 1% 2%;
+        font-size: 1.5em;
+    }
+
+    .faux-button-r {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 1% 2%;
+        font-size: 1.5em;
+    }
+
+    .submit-signup {
+        font-size: 1em;
+        padding: 0;
+        margin: 0;
+    }
+
+    .only-controller {
+        padding: 0;
+    }
+
+    .top-rdetails {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .top-rdetails > div {
+        width: 53%;
+        margin-right: 1%;
+    }
+
+    .container-rdetails > h3 {
+        margin: 40px 0 0 5%;
+        color: #17252A;
+        font-size: 1.3em;
+    }
+
+    .room-images {
+        width: 45%;
+    }
+
+    .room-carr {
+        height: 95vh;
+    }
+
+    .room-avt {
+        width: 120px;
+        height: 120px;
+        top: 7%;
+        left: 105%;
+    }
+
+    .room-title-fav {
+        width: 70%;
+        margin: 15% 0 0 25%;
+    }
+
+    .room-title-fav > button {
+        width: 30px;
+        height: 30px;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    .room-intro {
+        margin: 45px 10px 15px;
+    }
+
+    .room-intro > p {
+        font-size: 1em;
+    }
+
+    .room-description {
+        margin: 15px 10px;
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .price-contact > h1 {
+        font-size: 3.2em;
+    }
+
+    .button-contact {
+        font-size: 1.3em;
+    }
+
+    .room-mainchar > ul {
+        padding: 0 5%;
+    }
+    .room-mainchar li {
+        margin-top: 7px;
+    }
+
+    .container-rdetails h3 {
+        font-size: 1.5em;
+    }
+
+    .room-location {
+        margin-top: 10px;
+        display: flex;
+        padding: 0 5%;
+        height: 250px;
+        width: 100%;
+    }
+
+    .room-owner {
+        padding-bottom: 50px;
+    }
+
+    .room-owner {
+        margin: 0 4%;
+    }
+
+    .offers {
+        padding-bottom: 40px;
+    }
+
+    .offers-controllers {
+        margin-top: 2.7%;
+        padding-top: 10px;
+    }
+
+    .offers-controllers > h4 {
+        font-weight: normal;
+        font-size: 1.2em;
+    }
+
+    .offers-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

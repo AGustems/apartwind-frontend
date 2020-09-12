@@ -1,35 +1,608 @@
-.button-dark{
-    font-size:28px;
-    margin-top:20px;
+/* COMMON BUTTONS */
+.button-dark {
+    font-size: 24px;
+    margin-top: 20px;
     padding: 10px;
-    width:270px;
-    background-color:#17252A;
+    width: 70%;
+    background-color: #17252A;
     border: 2px solid #3AAFA9;
     border-radius: 30px;
-    text-align:center;
+    text-align: center;
     box-shadow: 1px 1px 20px white;
 }
 
-.button-light{
-    font-size:28px;
-    margin-top:20px;
+.button-light {
+    font-size: 24px;
+    margin-top: 20px;
     padding: 10px;
-    width:270px;
-    background-color:#DEF2F1;
+    width: 70%;
+    background-color: #DEF2F1;
     border: 2px solid #2B7A78;
     border-radius: 30px;
-    text-align:center;
+    text-align: center;
     box-shadow: 1px 1px 20px white;
 }
 
-.button-dark>a{
+.button-dark > a {
     text-decoration: none;
     color: #3AAFA9;
     font-weight: bold;
 }
 
-.button-light>a{
-    text-decoration:none;
+.button-light > a {
+    text-decoration: none;
     color: #2B7A78;
     font-weight: bold;
+}
+
+.button-light-forms {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2B7A78;
+    margin-top: 20px;
+    padding: 10px;
+    width: 70%;
+    background-color: #DEF2F1;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.button-dark-forms {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2B7A78;
+    margin-top: 20px;
+    padding: 10px;
+    width: 70%;
+    background-color: #17252A;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.button-light-little {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2B7A78;
+    padding: 5px;
+    width: 30%;
+    background-color: #DEF2F1;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.button-dark-little {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2B7A78;
+    padding: 5px;
+    width: 30%;
+    background-color: #17252A;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 1px 1px 5px gray;
+}
+
+/* COMMON INPUT TYPE TEXT*/
+.input-text-bg {
+    width: 75%;
+    background-color: #17252A;
+    margin: 10px 0 0;
+    padding: 0 20px 5px;
+    border-radius: 20px;
+}
+
+.input-text {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid white;
+    outline: 0;
+    font-size: 0.8em;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2;
+}
+
+.input-text::placeholder {
+    color: white;
+}
+
+input::-webkit-calendar-picker-indicator {
+    background: transparent;
+}
+
+/* COMMON NAVBAR */
+.navbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    background-color: #17252A;
+    padding: 5px;
+}
+
+.navbar img {
+    height: 30px;
+}
+
+.navbar-title {
+    display: none;
+}
+
+/* COMMON MAP */
+.map {
+    width: 100%;
+    height: 200px;
+    margin: 5px 0 40px;
+}
+
+.map-form {
+    display: flex;
+    margin: 0 0 10px;
+}
+
+::-webkit-file-upload-button {
+    background: #DEF2F1;
+    color: #2B7A78;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* ROOM INFO COMMON */
+.container-roomlist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room-item {
+    display: flex;
+    width: 90%;
+    height: 200px;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px gray;
+    margin: 10px 0;
+}
+
+.room-data > hr {
+    margin: 4px;
+    border: 1px solid #DEF2F1;
+}
+
+.room-img {
+    width: 40%;
+    height: 100%;
+}
+
+.room-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px 0 0 30px;
+}
+
+.room-data {
+    padding: 10px 20px 0 5px;
+    width: 60%;
+    background: white;
+    border-radius: 0 30px 30px 0;
+}
+
+.room-data img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 60px;
+}
+
+.room-data > h5 {
+    font-size: 0.8em;
+    margin: 5px;
+    color: #17252A;
+}
+
+.room-data > h2 {
+    margin: 5px;
+    color: #2B7A78;
+}
+
+.room-data > h6 {
+    font-size: 0.7em;
+    margin: 5px;
+    color: #2B7A78;
+    font-weight: normal;
+}
+
+.room-top-info {
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.room-top-info > button {
+    width: 30px;
+    height: 30px;
+    color: #AC3B61;
+    font-size: 26px;
+    background-color: transparent;
+    border: none;
+}
+
+.room-data > h5 > span > a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: #2B7A78;
+}
+
+.error {
+    margin: 20px 0 0;
+    text-align: left;
+    color: #AC3B61;
+}
+
+.error-little {
+    font-size: 0.7em;
+    margin: 5px 0 0;
+    text-align: left;
+    color: #AC3B61;
+}
+
+/* SEARCH BAR */
+.container-search {
+    width: 70%;
+    margin-top: 15px;
+    color: white;
+    background: #17252A;
+    padding-left: 15px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.searchbar {
+    background: transparent;
+    text-decoration: underline;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+}
+
+.searchbar::placeholder {
+    color: white;
+    text-decoration: underline;
+}
+
+/* ORDER BOX */
+.rooms-page > h6 {
+    font-size: 0.8em;
+    width: 80%;
+    margin: 15px 0 5px;
+    color: #17252A;
+}
+
+.container-order {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    width: 85%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px gray;
+}
+
+.container-order h6 {
+    font-size: 0.8em;
+    margin: 8px;
+    font-weight: normal;
+    color: #17252A;
+}
+
+/* OFFER INFO COMMON */
+.offer-info {
+    width: 90%;
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px gray;
+    margin: 20px 0;
+    background-color: white;
+
+}
+
+.offer-banner {
+    height: 80px;
+    border-radius: 30px 30px 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.offer-banner > h2 {
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px gray;
+    text-align: center;
+    padding-top: 22px;
+    font-size: 1.7em;
+}
+
+.offer-message > h6 {
+    padding: 8px 15px;
+    color: #17252A;
+}
+
+.offer-message > p {
+    font-size: 0.8em;
+    padding: 0 15px;
+    color: #17252A;
+}
+
+.offer-info > p {
+    font-size: 0.7em;
+    padding: 0 15px 15px;
+    text-align: center;
+    color: #17252A;
+}
+
+.offer-warning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.offer-warning > p {
+    font-size: 0.7em;
+    text-align: center;
+    color: #f74d4d;
+    margin-bottom: 5px;
+}
+
+/* ERROR 403, 404, 500 */
+.error-page {
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.error-page > h1 {
+    color: #2B7A78;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 45%;
+}
+
+.error-page > p {
+    margin: 5%;
+    text-align: center;
+}
+
+.error-page a {
+    color: #2B7A78;
+    text-decoration: underline;
+}
+
+.error-page-img {
+    width: 100%;
+}
+
+/* RESPONSIVE RESIZE (IPAD) */
+@media screen and (min-width: 600px) {
+    .button-dark,
+    .button-light {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .input-text-bg {
+        font-size: 18px;
+    }
+
+    .error-little {
+        font-size: 1em;
+    }
+
+    .map {
+        height: 400px;
+    }
+
+    .map-form {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .button-dark-forms,
+    .button-light-forms {
+        font-size: 1.4em;
+    }
+
+    .navbar img {
+        height: 35px;
+    }
+
+    .container-search {
+        font-size: 1.2em;
+    }
+
+    .rooms-page > h6 {
+        font-size: 1em;
+    }
+
+    .container-order h6 {
+        font-size: 1em;
+    }
+
+    .room-item {
+        width: 85%;
+        height: 250px;
+        margin: 15px 0;
+    }
+
+    .room-img {
+        width: 45%;
+    }
+
+    .room-data {
+        padding: 10px 20px;
+    }
+
+    .room-data img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .room-data > h5 {
+        font-size: 1.2em;
+        margin: 10px;
+    }
+
+    .room-data > h2 {
+        margin: 10px 5px;
+    }
+
+    .room-data > h6 {
+        font-size: 0.85em;
+    }
+
+    .room-top-info > button {
+        width: 50px;
+        height: 50px;
+        font-size: 32px;
+    }
+
+    .offer-info {
+        width: 85%;
+    }
+
+    .offer-banner {
+        height: 160px;
+    }
+
+    .offer-banner > h2 {
+        padding-top: 50px;
+        font-size: 2.6em;
+    }
+
+    .offer-message > h6 {
+        font-size: 1.3em;
+    }
+
+    .offer-message > p {
+        font-size: 1.2em;
+    }
+
+    .offer-info > p {
+        font-size: 1.1em;
+    }
+
+    .offer-warning > p {
+        font-size: 1.1em;
+    }
+
+    .error-page > h1 {
+        font-size: 5em;
+        padding-top: 17%;
+    }
+
+    .error-page > p {
+        padding: 0 12%;
+        font-size: 1.5em;
+    }
+
+    .error-page a {
+        font-size: 1em;
+    }
+}
+
+/* RESPONSIVE RESIZE (DESKTOP) */
+@media screen and (min-width: 1200px) {
+    .button-dark,
+    .button-light {
+        font-size: 18px;
+        margin: 5px 0 10px;
+        padding: 5px;
+        width: 60%;
+        box-shadow: 1px 1px 10px #17252A;
+    }
+
+    .container-roomlist {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .room-item {
+        display: flex;
+        width: 45%;
+    }
+
+    .searchbar {
+        width: 90%;
+    }
+
+    .navbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: flex-start;
+        height: 5%;
+    }
+
+    .navbar > div {
+        margin: 0 2%;
+    }
+
+    .navbar img {
+        display: none;
+        height: 30px;
+    }
+
+    .navbar-title {
+        display: inline;
+        text-decoration: none;
+        color: white;
+    }
+
+    .container-search {
+        margin-top: 5%;
+    }
+
+    .navbar h3 {
+        margin: 0 5%;
+    }
+
+    .offer-info {
+        width: 40%;
+    }
+
+    .error-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .error-page > h1 {
+        padding-top: 2%;
+    }
+
+    .error-page > p {
+        margin: 0 5%;
+        text-align: center;
+    }
+
+    .error-page a {
+        color: #2B7A78;
+        text-decoration: underline;
+    }
+
+    .error-page-img {
+        width: 40%;
+    }
 }

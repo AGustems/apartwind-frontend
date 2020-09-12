@@ -1,24 +1,594 @@
-.feature{
-    margin:30px 0 0 0;
+/* FEATURE LAYOUT */
+.feature {
+    margin: 30px 0 0;
 }
 
-.feature-icon>img{
+.feature-icon > img {
     height: 70px;
 }
 
-.feature-icon{
+.feature-icon {
     text-align: center;
 }
 
-.feature h3{
-    font-size:24px;
-    color:#17252A;
+.feature h3 {
+    font-size: 24px;
+    color: #17252A;
     text-align: center;
     margin: 10px;
 }
 
-.feature p{
+.feature p {
     color: #2B7A78;
     text-align: center;
-    margin: 0px 20px 25px 20px;
+    margin: 0 20px 25px;
+}
+
+/*FORM LAYOUT*/
+.container-login {
+    width: 100%;
+    min-height: 100vh;
+    text-align: center;
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.container-login > p {
+    padding-bottom: 5%;
+    margin: 5% 0 0;
+}
+
+.banner-form {
+    background: #fff;
+    box-shadow: 2px 2px 15px gray;
+    margin: 0 5%;
+    padding: 0 8% 10%;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+
+.banner-headding {
+    display: flex;
+}
+
+.form-logo {
+    padding-top: 10px;
+    text-align: left;
+}
+
+.form-logo > img {
+    height: 80px;
+}
+
+.form-title {
+    width: 80%;
+    margin-top: 15%;
+}
+
+.form-title > h1 {
+    width: 100%;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.form-title > h3 {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.container-login > img {
+    padding-top: 15%;
+    width: 90%;
+}
+
+.banner-content > h4 {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/*USER LAYOUT*/
+.container-userprofile {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 70px;
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-userinfo {
+    width: 100%;
+    min-height:100vh;
+    padding-bottom: 70px;
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    box-shadow: 2px 2px 15px gray;
+    margin: 0 5%;
+    padding: 0 8% 3%;
+    border-radius: 0 0 15px 15px;
+    text-align: center;
+}
+
+.user-img {
+    padding-top: 10%;
+}
+
+.user-img > img {
+    width: 130px;
+    height: 130px;
+    border-radius: 130px;
+    object-fit: cover;
+}
+
+.user-title {
+    padding-bottom: 5%;
+}
+
+.user-title > h2 {
+    font-size: 1.2em;
+    margin: 8% 0 0;
+}
+
+.user-title > h4 {
+    font-size: 0.9em;
+    margin: 5% 0;
+    color: #2B7A78;
+}
+
+.user-title > a {
+    display: block;
+    text-decoration: underline;
+    font-size: 0.9em;
+    color: #2B7A78;
+}
+
+.user-title > h2 > span > a > img {
+    margin: 0 0 6px 10px;
+    height: 14px;
+}
+
+.social-links {
+    padding: 5% 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.user-presentation {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px gray;
+    margin: 6%;
+    padding: 8px 18px;
+}
+
+.user-presentation p {
+    margin: 0;
+    text-align: left;
+    color: #2B7A78;
+}
+
+.social-links img {
+    height: 60px;
+}
+
+.characteristics-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px gray;
+    margin: 6%;
+    padding: 5px 10px 15px 5px;
+}
+
+.characteristics-list > h2 {
+    font-size: 1.3em;
+    margin: 5% 0 0;
+}
+
+.characteristics-list > ul {
+    margin: 0;
+    padding: 3% 0;
+    color: #2B7A78;
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.container-adsfavs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-adsfavs > h2 {
+    width: 85%;
+    margin: 30px 0 0;
+}
+
+/* AMENITIES LAYOUT */
+.container-amenities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amenity-feature {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.amenity-feature > h6 {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #2B7A78;
+}
+
+.list-icon {
+    margin-right: 10px;
+}
+
+.list-check {
+    color: green;
+    margin: 0 10px;
+}
+
+.list-cross {
+    color: red;
+    margin: 0 10px;
+}
+
+/* FLATMATES LAYOUT */
+.flatmate-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flatmate-banner {
+    width: 45%;
+}
+
+.flatmate-banner > h4 {
+    font-size: 1em;
+    margin: 0 0 10px;
+    color: #2B7A78;
+}
+
+.flatmate-banner > h1 {
+    font-size: 32px;
+    color: white;
+    background: #17252A;
+    border-radius: 15px;
+    padding: 20px 50px;
+    margin: 0 0 10px;
+}
+
+.flatmate-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flatmate-buttons > input {
+    border: none;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    background: #2B7A78;
+    color: white;
+}
+
+/* ERROR 403 LAYOUT */
+
+/* RESPONSIVE RESIZE (IPAD) */
+@media screen and (min-width: 600px) {
+    .feature {
+        margin: 50px 0 0;
+    }
+
+    .feature-icon > img {
+        height: 100px;
+    }
+
+    .feature h3 {
+        font-size: 30px;
+        margin: 15px;
+    }
+
+    .feature p {
+        font-size: 1.3em;
+        margin: 0 60px 25px;
+    }
+
+    .form-logo {
+        padding-top: 20px;
+    }
+
+    .form-logo > img {
+        height: 100px;
+    }
+    .form-title {
+        margin-top: 10%;
+    }
+
+    .form-title > h1 {
+        font-size: 3.5em;
+        margin-bottom: 20px;
+    }
+
+    .form-title > h3 {
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+
+    .container-login > img {
+        padding-top: 60px;
+        width: 55%;
+    }
+
+    .container-login > p {
+        font-size: 1.3em;
+    }
+
+    .amenity-feature > h6 {
+        font-size: 22px;
+    }
+
+    .flatmate-banner {
+        width: 37%;
+    }
+
+    .flatmate-banner > h4 {
+        font-size: 1.3em;
+    }
+
+    .flatmate-banner > h1 {
+        font-size: 3.3em;
+    }
+
+    .flatmate-buttons > input {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+
+    .banner-content > h4 {
+        font-size: 1.3em;
+    }
+
+    .user-img > img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .user-title > h2 {
+        font-size: 2em;
+        margin: 12% 0 0;
+    }
+
+    .user-title > h4 {
+        font-size: 1.5em;
+        margin: 5% 0;
+    }
+
+    .user-title > a {
+        font-size: 1.2em;
+    }
+
+    .user-title > h2 > span > a > img {
+        margin: 0 0 10px 10px;
+        height: 24px;
+    }
+
+    .user-presentation{
+        margin: 3% 6%;
+    }
+
+    .user-presentation>p{
+        font-size: 1.3em;
+    }
+
+    .social-links{
+        padding: 2% 10%;
+    }
+
+    .social-links img {
+        height: 90px;
+    }
+
+    .characteristics-list > h2 {
+        font-size: 2.3em;
+        margin: 5% 0 0;
+    }
+
+    .characteristics-list > ul {
+        font-size: 1.5em;
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+
+    .container-adsfavs > h2 {
+        width: 80%;
+        margin: 30px 0 15px;
+        font-size: 2.2em;
+    }
+}
+
+/* RESPONSIVE RESIZE (DESKTOP) */
+@media screen and (min-width: 1200px) {
+    .feature {
+        margin: 30px 0 0;
+    }
+
+    .feature-icon > img {
+        height: 70px;
+    }
+
+    .feature h3 {
+        font-size: 28px;
+        margin: 15px;
+    }
+
+    .feature p {
+        font-size: 1em;
+        margin: 0 60px 25px;
+    }
+
+    .banner-form {
+        width: 50%;
+        margin: 0 2%;
+        padding: 0 8% 5%;
+        border-radius: 0 0 15px 15px;
+        text-align: center;
+    }
+
+    .container-login>h3{
+        width: 50%;
+    }
+
+    .login-form{
+        width:50%;
+    }
+
+    .container-login > img {
+        position: absolute;
+        margin: 10% 5% 0;
+        top: 0;
+        right: 0;
+        width: 35%;
+    }
+
+    .container-login>p{
+        width: 50%;
+        padding: 0 0 2% 5%;
+    }
+
+    .banner-top{
+        width: 40%;
+        padding: 0 2% 2%;
+        height: 100%; 
+    }
+
+    .container-userprofile{
+        display:flex;
+        flex-wrap: wrap;
+        margin-top: 2.5%;
+    }
+
+    .user-img{
+        padding-top: 5%;
+    }
+
+    .user-img > img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .user-description{
+        width: 40%;
+        margin: 1% 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-presentation{
+        width:100%;
+        margin-top: 2%;
+    }
+
+    .user-title > a {
+        display: inline;
+        font-size: 0.9em;
+        margin: 0 5%;
+    }
+
+    .social-links {
+        padding: 2% 5%;
+        width: 90%
+    }
+
+    .characteristics-list{
+        width: 100%;
+        margin: 2% 5% 2%;
+        padding: 2%;
+    }
+
+    .characteristics-list>h2{
+        margin: 0;
+    }
+
+    .characteristics-list > ul {
+        width: 75%;
+        padding: 2%;
+        columns: 7;
+        -webkit-columns: 7;
+        -moz-columns: 7;
+    }
+
+    .characteristics-list>ul>li{
+        font-size: 0.7em;
+    }
+
+    .container-adsfavs {
+        width: 50%;
+    }
+
+    .container-adsfavs > h2 {
+        width: 85%;
+        margin: 2% 0;
+    }
+
+    .container-userinfo{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .container-userinfo>.user-description{
+        height:55%;
+    }
+
+    .container-userinfo>.banner-top{
+        margin-top: 2%;
+        width: 40%;
+    }
+
+    .container-userinfo>.user-description{
+        margin-top:3%;
+    }
+
+    .container-userinfo .user-presentation>p{
+        font-size: 1em;
+    }
+
+    .container-userinfo .social-links>a>img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .container-userinfo>.characteristics-list{
+        margin-top: 0;
+        height: 100%;
+    }
+
+    .footer-text{
+        position: absolute;
+        bottom: 5%;
+        width:50%;
+    }
 }
