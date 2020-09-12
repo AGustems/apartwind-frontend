@@ -9,6 +9,8 @@ import Flatmates from '../layouts/Flatmates'
 import BedBath from '../layouts/BedBath'
 import Tolerances from '../layouts/Tolerances'
 import '../../theme/views.css'
+import Error403 from '../common/Error403'
+import Error500 from '../common/Error500'
 
 const AddRoom = (props) => {
     const initialState = {
@@ -150,14 +152,14 @@ const AddRoom = (props) => {
 
     const controllers = (
         <div className="form-controllers">
-            <button className="faux-button" onClick={changePageBack}>Back</button>
-            <button className="faux-button" onClick={changePageNext}>Next</button>
+            <button className="faux-button-l" onClick={changePageBack}>Back</button>
+            <button className="faux-button-r" onClick={changePageNext}>Next</button>
         </div>
     )
     
     if(props.userInSession.loggedInUser){
         return(
-            <h1>User no authorized</h1>
+            <Error403 />
         )
     } else if (roomState.page === 0) {
         return <Form    title="Property" 
@@ -171,7 +173,7 @@ const AddRoom = (props) => {
                             </div>}
                         image="/images/room/room-form1.png"
                         littleInfo={<div className="only-controller" style={{marginTop: "50px"}}>
-                                        <button className="faux-button" onClick={changePageNext}>Next</button>
+                                        <button className="faux-button-r" onClick={changePageNext}>Next</button>
                                     </div>}
         />
     } else if (roomState.page === 1){
@@ -317,11 +319,13 @@ const AddRoom = (props) => {
                     </div>}
                     image="/images/room/room-form9.png"
                     littleInfo={<div className="submit-signup">
-                        <button className="faux-button" onClick={changePageBack}>Back</button>
-                        <button className="faux-button" onClick={handleSubmit}>Send</button>
+                        <button className="faux-button-l" onClick={changePageBack}>Back</button>
+                        <button className="faux-button-r" onClick={handleSubmit}>Send</button>
                     </div>}
             />
         )
+    } else {
+        return(<Error500 />)
     }
 }
 

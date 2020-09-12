@@ -135,6 +135,10 @@ input::-webkit-calendar-picker-indicator {
     height: 30px;
 }
 
+.navbar-title{
+    display: none;
+}
+
 /* COMMON MAP */
 .map {
     width: 100%;
@@ -156,6 +160,12 @@ input::-webkit-calendar-picker-indicator {
 }
 
 /* ROOM INFO COMMON */
+.container-roomlist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .room-item {
     display: flex;
     width: 90%;
@@ -297,6 +307,35 @@ input::-webkit-calendar-picker-indicator {
     color: #17252A
 }
 
+/* ERROR 403, 404, 500 */
+.error-page{
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.error-page>h1{
+    color: #2B7A78;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 45%;
+}
+
+.error-page>p{
+    margin: 5%;
+    text-align: center;
+}
+
+.error-page a{
+    color: #2B7A78;
+    text-decoration: underline;
+}
+
+.error-page-img{
+    width: 100%;
+}
+
 /* RESPONSIVE RESIZE (IPAD) */
 @media screen and (min-width: 600px) {
     .button-dark, .button-light {
@@ -378,6 +417,20 @@ input::-webkit-calendar-picker-indicator {
         height:50px;
         font-size: 32px;
     }
+    
+    .error-page>h1{
+        font-size:5em;
+        padding-top: 17%;
+    }
+    
+    .error-page>p{
+        padding: 0 12%;
+        font-size:1.5em;
+    }
+    
+    .error-page a{
+        font-size:1em;
+    }
 }
 
 /* RESPONSIVE RESIZE (DESKTOP) */
@@ -388,5 +441,76 @@ input::-webkit-calendar-picker-indicator {
         padding: 5px;
         width: 60%;
         box-shadow: 1px 1px 10px #17252A;
+    }
+
+    .container-roomlist{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .room-item {
+        display: flex;
+        width: 45%;
+    }
+
+    .searchbar{
+        width: 90%;
+    }
+
+    .navbar {
+        top: 0;
+        left: 0;
+        right: 0;
+        justify-content: flex-start;
+        height: 5%;
+    }
+
+    .navbar>div{
+        margin: 0 2%;
+    }
+    
+    .navbar img {
+        display: none;
+        height: 30px;
+    }
+    
+    .navbar-title{
+        display: inline;
+        text-decoration: none;
+        color: white;
+    }
+
+    .container-search{
+        margin-top: 5%;
+    }
+
+    .navbar h3{
+        margin: 0 5%;
+    }
+    
+    .error-page{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .error-page>h1{
+        padding-top: 2%;
+    }
+    
+    .error-page>p{
+        margin: 0 5%;
+        text-align: center;
+    }
+    
+    .error-page a{
+        color: #2B7A78;
+        text-decoration: underline;
+    }
+    
+    .error-page-img{
+        width: 40%;
     }
 }

@@ -3,6 +3,7 @@ import axios from 'axios'
 
 import Form from '../layouts/Form'
 import InputText from '../common/InputText'
+import Error403 from '../common/Error403'
 import '../../theme/views.css'
 
 const EditProfile = (props) =>{
@@ -207,7 +208,7 @@ const EditProfile = (props) =>{
             />
         )
     } else {
-        return(<h1>No user logged in</h1>)
+        return(<Error403/>)
     }
 }
 

@@ -14,7 +14,7 @@ import AddRoom from './views/AddRoom'
 import RoomsList from './views/RoomsList'
 import User from './common/User'
 import Logout from './views/Logout'
-
+import Error404 from './common/Error404'
 
 const App = () => {
     const initialState = {
@@ -46,6 +46,7 @@ const App = () => {
             <Route exact path='/rooms/:id' render={(props) => <RoomDetails {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
             <Route exact path='/rooms/edit/:id' render={(props) => <EditRoom {...props} userInSession={userInSession} setUserSession={setUserSession}/>}/>
             <Route exact path='/rooms/delete/:id' render={(props) => <DeleteRoom {...props} userInSession={userInSession}/>}/>
+            <Route component={Error404}/>
         </Switch>
     );
 }

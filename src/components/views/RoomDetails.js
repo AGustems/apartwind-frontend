@@ -9,6 +9,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 
 import NavBar from '../common/NavBar'
+import Error500 from '../common/Error500';
 
 const RoomDetails = (props) => {
     const [room,
@@ -19,7 +20,8 @@ const RoomDetails = (props) => {
             .get(`http://localhost:5000/rooms/${props.match.params.id}`)
             .then(response => {
                 setRoom(() => (response.data))
-            }).catch(err => setRoom(state => ({
+            })
+            .catch(err => setRoom(state => ({
                 ...state,
                 errorMessage: err.response.data.message
             })))
@@ -66,75 +68,79 @@ const RoomDetails = (props) => {
 
     if (room.loading) {
         return (
-            <h1>
-                Loading
-            </h1>
+            <Error500 />
         )
     } else {
-        const carouselImages = room.images.map(item => <Carousel.Item key={item}>
-            <img className="room-carr" alt="room" src={item}/>
-        </Carousel.Item>)
+        const carouselImages = room
+            .images
+            .map(item => <Carousel.Item key={item}>
+                <img className="room-carr" alt="room" src={item}/>
+            </Carousel.Item>)
         return (
             <main className="container-rdetails">
-                <section className="room-images">
-                    <Carousel>{carouselImages}</Carousel>
-                    <Link to={`/user/${room.owner._id}`}><img className="room-avt" alt={room.owner.name} src={room.owner.imageUrl}/></Link>
-                </section>
-                <section className="room-title-fav">
-                    <h1>{room.title}</h1>
-                    {(props.userInSession.loggedInUser)
-                        ? null
-                        : <button onClick={() => handleFavClick()}>
-                            {(props.userInSession.favourites.includes(props.match.params.id))
-                                ? <FontAwesomeIcon icon={fas.faHeart}/>
-                                : <FontAwesomeIcon icon={far.faHeart}/>}
-                        </button>}
-                </section>
-                <section className="room-info">
-                    <div className="room-intro">
-                        <p><FontAwesomeIcon icon={fas.faUserFriends}/> {room.flatmates[0] + room.flatmates[1]}
-                            roomates</p>
-                        <p><FontAwesomeIcon icon={fas.faDoorOpen}/> {room.bedrooms}
-                            bedrooms</p>
-                        <p><FontAwesomeIcon icon={fas.faToilet}/> {room.bathrooms}
-                            bathrooms</p>
-                        <p><FontAwesomeIcon icon={fas.faBed}/> {room.size}</p>
+                <div className="top-rdetails">
+                    <section className="room-images">
+                        <Carousel>{carouselImages}</Carousel>
+                        <Link to={`/user/${room.owner._id}`}><img className="room-avt" alt={room.owner.name} src={room.owner.imageUrl}/></Link>
+                    </section>
+                    <div>
+                        <section className="room-title-fav">
+                            <h1>{room.title}</h1>
+                            {(props.userInSession.loggedInUser)
+                                ? null
+                                : <button onClick={() => handleFavClick()}>
+                                    {(props.userInSession.favourites.includes(props.match.params.id))
+                                        ? <FontAwesomeIcon icon={fas.faHeart}/>
+                                        : <FontAwesomeIcon icon={far.faHeart}/>}
+                                </button>}
+                        </section>
+                        <section className="room-info">
+                            <div className="room-intro">
+                                <p><FontAwesomeIcon icon={fas.faUserFriends}/> {room.flatmates[0] + room.flatmates[1]}
+                                    roomates</p>
+                                <p><FontAwesomeIcon icon={fas.faDoorOpen}/> {room.bedrooms}
+                                    bedrooms</p>
+                                <p><FontAwesomeIcon icon={fas.faToilet}/> {room.bathrooms}
+                                    bathrooms</p>
+                                <p><FontAwesomeIcon icon={fas.faBed}/> {room.size}</p>
+                            </div>
+                            <p className="room-description">{room.description}</p>
+                            <div className="price-contact">
+                                <h1>{room.price}€</h1>
+                                <button className="button-contact">Contact</button>
+                            </div>
+                        </section>
+                        <h3>Amenities</h3>
+                        <section className="room-mainchar">
+                            <ul>
+                                <li>{room.amenities.living
+                                        ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
+                                        : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
+                                    Shared living room</li>
+                                <li>{room.amenities.internet
+                                        ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
+                                        : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
+                                    Internet</li>
+                                <li>{room.amenities.parking
+                                        ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
+                                        : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
+                                    Parking</li>
+                                <li>{room.amenities.balcony
+                                        ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
+                                        : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
+                                    Balcony or terrace</li>
+                                <li>{room.amenities.garden
+                                        ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
+                                        : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
+                                    Garden or patio</li>
+                                <li>{room.amenities.daccess
+                                        ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
+                                        : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
+                                    Adapted access</li>
+                            </ul>
+                        </section>
                     </div>
-                    <p className="room-description">{room.description}</p>
-                    <div className="price-contact">
-                        <h1>{room.price}€</h1>
-                        <button className="button-contact">Contact</button>
-                    </div>
-                </section>
-                <h3>Amenities</h3>
-                <section className="room-mainchar">
-                    <ul>
-                        <li>{room.amenities.living
-                                ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
-                                : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
-                            Shared living room</li>
-                        <li>{room.amenities.internet
-                                ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
-                                : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
-                            Internet</li>
-                        <li>{room.amenities.parking
-                                ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
-                                : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
-                            Parking</li>
-                        <li>{room.amenities.balcony
-                                ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
-                                : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
-                            Balcony or terrace</li>
-                        <li>{room.amenities.garden
-                                ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
-                                : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
-                            Garden or patio</li>
-                        <li>{room.amenities.daccess
-                                ? <FontAwesomeIcon className="list-check" icon={fas.faCheckCircle}/>
-                                : <FontAwesomeIcon className="list-cross" icon={fas.faTimesCircle}/>}
-                            Adapted access</li>
-                    </ul>
-                </section>
+                </div>
                 <h3>Location</h3>
                 <section className="room-location">
                     <GoogleMapReact

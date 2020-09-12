@@ -23,7 +23,10 @@ const Login = (props) => {
         }, {withCredentials: true}).then(response => {
             props.setUserSession(response.data);
             props.history.push("/userprofile/" + response.data._id)
-        }).catch(err => console.log('Something went wrong when sending the login information', err))
+        }).catch(err => setUserLogin(userLogin => ({
+            ...userLogin,
+            errorMessage: err.response.data.message
+        })))
     }
 
     const handleChange = ({target}) => {
@@ -55,6 +58,7 @@ const Login = (props) => {
                     />
                     <div className="container-submit">
                     <input className="input-submit" type="submit" value="Log in"/>
+                    {userLogin.errorMessage ? <h6 style={{marginLeft: "20%"}} className="error">Error: {userLogin.errorMessage} </h6> : null}
                     </div>
                 </form>}
                 image="/images/login-img.png"

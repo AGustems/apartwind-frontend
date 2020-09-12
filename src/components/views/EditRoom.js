@@ -4,6 +4,7 @@ import axios from 'axios'
 import Form from '../layouts/Form'
 import InputText from '../common/InputText'
 import Map from '../common/Map'
+import Error403 from '../common/Error403'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faAccessibleIcon} from '@fortawesome/free-brands-svg-icons'
 import {faCheckCircle, faTimesCircle, faMale, faFemale, faPeopleArrows, faGraduationCap,
@@ -432,7 +433,7 @@ const EditRoom = (props) => {
             />
         )
     } else {
-        return(<h1>Not authorised</h1>)
+        return(<Error403/>)
     }
 }
 
