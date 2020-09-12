@@ -6,7 +6,7 @@ import Form from '../layouts/Form'
 
 function DeleteProfile(props) {
     const handleDelete = () => {
-        axios.delete(`http://localhost:5000/userprofile/${props.match.params.id}/delete`)
+        axios.delete(`${process.env.REACT_APP_API_URL}/userprofile/${props.match.params.id}/delete`)
             .then(() => props.history.push('/'))
     }
     

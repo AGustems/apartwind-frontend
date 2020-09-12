@@ -83,7 +83,7 @@ const AddRoom = (props) => {
             formData.append("images", roomState.images)
         }
 
-        axios.post('http://localhost:5000/rooms/add', formData, {withCredentials:true})
+        axios.post(`${process.env.REACT_APP_API_URL}/rooms/add`, formData, {withCredentials:true})
             .then(() => {
                 props.history.push("/")
             }).catch(err => setRoomState(roomState => ({

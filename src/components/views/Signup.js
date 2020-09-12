@@ -42,7 +42,7 @@ const Signup = (props) => {
         const characteristics = userSignup.characteristics
         const socials = userSignup.socials
 
-        axios.post('http://localhost:5000/auth/signup', {
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/signup`, {
             name,
             surname,
             occupation,

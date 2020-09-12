@@ -13,7 +13,7 @@ function UserProfile(props) {
     useEffect(() => {
         let mounted = true;
         axios
-            .get(`http://localhost:5000/userprofile/${props.match.params.id}`)
+            .get(`${process.env.REACT_APP_API_URL}/userprofile/${props.match.params.id}`)
             .then(response => {
                 if(mounted){
                     setState(user => ({

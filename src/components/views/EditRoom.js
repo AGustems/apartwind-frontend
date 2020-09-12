@@ -16,7 +16,7 @@ const EditRoom = (props) => {
     const[roomState, setRoomState] = useState({})
     
     useEffect(() => {
-        axios.get(`http://localhost:5000/rooms/${props.match.params.id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/rooms/${props.match.params.id}`)
         .then(response => {
             setRoomState({
                 property: response.data.property,
@@ -67,7 +67,7 @@ const EditRoom = (props) => {
         formData.append("title", roomState.title)
         formData.append("description", roomState.description)
 
-        axios.put(`http://localhost:5000/rooms/${props.match.params.id}/edit`, formData, {withCredentials:true})
+        axios.put(`${process.env.REACT_APP_API_URL}/rooms/${props.match.params.id}/edit`, formData, {withCredentials:true})
             .then(() => {
                 props.history.push(`/userprofile/${props.userInSession._id}`)
             }).catch(err => setRoomState(roomState => ({

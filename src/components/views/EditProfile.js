@@ -46,7 +46,7 @@ const EditProfile = (props) =>{
         updateData.append("socials", JSON.stringify(userEdit.socials))
         updateData.append("characteristics", JSON.stringify(userEdit.characteristics))
 
-        axios.put(`http://localhost:5000/userprofile/${props.match.params.id}`, updateData, {withCredentials:true})
+        axios.put(`${process.env.REACT_APP_API_URL}/userprofile/${props.match.params.id}`, updateData, {withCredentials:true})
             .then((response) => {
                 props.setUserSession(response.data)
                 props.history.push(`/userprofile/${props.match.params.id}`)

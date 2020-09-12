@@ -19,7 +19,7 @@ const AddOffer = (props) => {
         const message = state.message
         const userId = props.userInSession._id
 
-        axios.put(`http://localhost:5000/rooms/${props.match.params.id}/newOffer`, {
+        axios.put(`${process.env.REACT_APP_API_URL}/rooms/${props.match.params.id}/newOffer`, {
             userId: userId,
             message: message
         }, {withCredentials: true}).then(() => props.history.push('/rooms'))

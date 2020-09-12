@@ -25,7 +25,7 @@ const Map = (props) => {
     const handleSubmit = e => {
         e.preventDefault()
         axios
-            .get('http://localhost:5000/maps?search=' + state.search)
+            .get(`${process.env.REACT_APP_API_URL}/maps?search=${state.seach}`)
             .then(response => {
                 if(response.data.candidates.length < 1){
                     setState(state => ({

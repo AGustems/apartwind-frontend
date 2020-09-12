@@ -25,7 +25,7 @@ const OfferInfo = (props) => {
     }
     
     const handleDelete = () => {
-        axios.put(`http://localhost:5000/rooms/${props.roomId}/deleteOffer`, {
+        axios.put(`${process.env.REACT_APP_API_URL}/rooms/${props.roomId}/deleteOffer`, {
             userId: props.userId
         }, {withCredentials: true})
         .then(() => history.go(0))

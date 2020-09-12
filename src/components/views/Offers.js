@@ -18,7 +18,7 @@ const Offers = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/rooms/userAds/${props.match.params.id}`)
+            .get(`${process.env.REACT_APP_API_URL}/rooms/userAds/${props.match.params.id}`)
             .then(response => {
                 setOffers(offers => ({
                     ...offers,
@@ -31,7 +31,7 @@ const Offers = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/rooms/userOffers/${props.match.params.id}`)
+            .get(`${process.env.REACT_APP_API_URL}/rooms/userOffers/${props.match.params.id}`)
             .then(response => {
                 setOffers(offers => ({
                     ...offers,

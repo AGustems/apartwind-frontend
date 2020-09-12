@@ -9,7 +9,7 @@ const User = (props) => {
     const[user, setUser] = useState({})
     
     useEffect(() => {
-        axios.get(`http://localhost:5000/userprofile/${props.match.params.id}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/userprofile/${props.match.params.id}`)
             .then(response => {
                 setUser(response.data)
             }).catch(err => console.log("Error while retrieving the user's data: ", err))
@@ -26,8 +26,6 @@ const User = (props) => {
                         <div className="user-title">
                             <h2>{user.name} {user.surname}</h2>
                             <h4>{user.occupation}</h4>
-                            {//contact button space
-                            }
                         </div>
                 </section>
                 <section className="user-description">

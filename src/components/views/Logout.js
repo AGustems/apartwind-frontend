@@ -4,7 +4,7 @@ import {Redirect} from 'react-router-dom'
 
 const Logout = ({setUserSession}) => {
     useLayoutEffect(() => {
-        axios.post('http://localhost:5000/auth/logout')
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/logout`)
             .then(() => {
                 setUserSession({
                     loggedInUser: {

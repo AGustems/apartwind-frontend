@@ -17,7 +17,7 @@ const Login = (props) => {
         e.preventDefault()
         const email = userLogin.email
         const password = userLogin.password
-        axios.post('http://localhost:5000/auth/login', {
+        axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, {
             email,
             password
         }, {withCredentials: true}).then(response => {

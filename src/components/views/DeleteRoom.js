@@ -7,7 +7,7 @@ import Form from '../layouts/Form'
 function DeleteProfile(props) {
     const handleDelete = () => {
         axios
-            .delete(`http://localhost:5000/rooms/${props.match.params.id}/delete`)
+            .delete(`${process.env.REACT_APP_API_URL}/rooms/${props.match.params.id}/delete`)
             .then(() => props.history.push(`/userprofile/${props.userInSession._id}`))
     }
     if (props.userInSession._id !== undefined) {

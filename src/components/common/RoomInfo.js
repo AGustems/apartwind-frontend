@@ -8,7 +8,7 @@ import axios from 'axios'
 
 function RoomInfo(props) {
     const handleClick = () => {
-        axios.patch(`http://localhost:5000/rooms/${props._id}`, {
+        axios.patch(`${process.env.REACT_APP_API_URL}/rooms/${props._id}`, {
             userId: props.userInSession._id
         }, {withCredentials: true}).then((response) => {
             props.setUserSession(state => response.data)

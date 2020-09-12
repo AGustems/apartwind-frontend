@@ -17,7 +17,7 @@ const RoomDetails = (props) => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:5000/rooms/${props.match.params.id}`)
+            .get(`${process.env.REACT_APP_API_URL}/rooms/${props.match.params.id}`)
             .then(response => {
                 setRoom(() => (response.data))
             })
@@ -28,7 +28,7 @@ const RoomDetails = (props) => {
     }, [props.match.params.id])
 
     const handleFavClick = () => {
-        axios.patch(`http://localhost:5000/rooms/${props.match.params.id}`, {
+        axios.patch(`${process.env.REACT_APP_API_URL}/rooms/${props.match.params.id}`, {
             userId: props.userInSession._id
         }, {withCredentials: true}).then((response) => {
             props.setUserSession(state => response.data)

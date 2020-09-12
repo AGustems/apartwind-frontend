@@ -21,7 +21,7 @@ const RoomsList = (props) => {
 
     useEffect(() => {
         axios
-            .get('http://localhost:5000/rooms')
+            .get(`${process.env.REACT_APP_API_URL}/rooms`)
             .then(response => {
                 setRooms(rooms => ({
                     ...rooms,
