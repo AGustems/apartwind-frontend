@@ -17,6 +17,7 @@ import Logout from './views/CompLogout/Logout'
 import Offers from './views/CompOffers/Offers'
 import AddOffer from './views/CompAddOffer/AddOffer'
 import Error404 from './common/CompError404/Error404'
+import '../theme/common.css'
 
 const App = () => {
     const initialState = {
