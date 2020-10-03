@@ -1,0 +1,247 @@
+.container-intro {
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-image: url("/images/home1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-intro > h2 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: right;
+    padding-top: 40%;
+    padding-right: 25px;
+    text-shadow: 1px 1px 10px black;
+}
+
+.container-intro > h1 {
+    font-size: 80px;
+    font-weight: bold;
+    text-align: right;
+    padding: 0 25px 0 0;
+    text-shadow: 1px 1px 10px black;
+}
+
+.container-intro > h3 {
+    font-size: 26px;
+    padding: 40px 0 0 30px;
+    text-shadow: 1px 1px 10px black;
+}
+
+.container-intro > p {
+    font-size: 18px;
+    padding: 10px 30px 0;
+    text-shadow: 1px 1px 10px black;
+}
+
+.scroll-call {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: right;
+}
+
+.button-containerh {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.button-white {
+    color: white;
+    font-size: 24px;
+    border: 2px solid white;
+    border-radius: 30px;
+    width: 130px;
+    text-align: center;
+    padding: 2px 0 5px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.button-white > a {
+    text-decoration: none;
+    color: white;
+}
+
+.container-features {
+    margin: 0;
+    padding: 0 0 10px;
+    background-image: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container-features h1 {
+    font-size: 52px;
+    color: white;
+    text-shadow: 1px 1px 10px #17252A;
+    text-align: center;
+    padding: 40px 0 0;
+}
+
+.container-callact {
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/bghero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container-callact > h2 {
+    margin: 0;
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    padding: 190px 0 0 25px;
+    text-shadow: 1px 1px 10px black;
+}
+
+.button-containerv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+}
+
+@media screen and (min-width: 600px) {
+    .container-intro > h2 {
+        padding-top: 25%;
+        font-size: 2em;
+        padding-right: 7%;
+    }
+
+    .container-intro > h1 {
+        font-size: 7em;
+        padding-right: 7%;
+    }
+
+    .container-intro > h3 {
+        padding: 100px 0 0 30px;
+        font-size: 2em;
+        padding-right: 7%;
+    }
+
+    .container-intro > p {
+        font-size: 1em;
+        padding: 10px 30px 0;
+        text-shadow: 1px 1px 10px black;
+    }
+
+    .button-containerh {
+        margin-top: 80px;
+    }
+
+    .button-white {
+        font-size: 26px;
+        width: 35%;
+        padding: 2px 0 5px;
+    }
+
+    .container-features h1 {
+        font-size: 5em;
+    }
+
+    .container-callact > h2 {
+        text-align: center;
+        font-size: 52px;
+        width: 100%;
+        padding: 25% 0;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    .container-intro {
+        background: url("/images/home1.png"), #2B7A78;
+        background-position: right, left;
+        background-repeat: no-repeat;
+        background-size: 55% 100%, 45% 100%;
+    }
+
+    .container-intro > h2 {
+        text-align: left;
+        padding: 8% 4% 0;
+        font-size: 3em;
+    }
+
+    .container-intro > h1 {
+        text-align: left;
+        padding: 0 4%;
+        font-size: 7em;
+    }
+
+    .container-intro > h3 {
+        width: 40%;
+        padding: 1% 4%;
+        font-size: 2em;
+    }
+
+    .container-intro > p {
+        width: 40%;
+        padding: 0 4%;
+        font-size: 1.3em;
+    }
+
+    .scroll-call {
+        text-align: left;
+        font-size: 1em;
+    }
+
+    .button-containerh {
+        margin-top: 4%;
+        width: 45%;
+    }
+
+    .button-white {
+        font-size: 1.8em;
+        border-radius: 50px;
+    }
+
+    .container-features {
+        min-height: 50vh;
+    }
+
+    .container-features > h1 {
+        font-size: 4em;
+    }
+
+    .features-h {
+        display: flex;
+    }
+
+    .container-adsfavs > .room-item {
+        width: 90%;
+    }
+
+    .container-callact {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 50vh;
+        width: 100%;
+        background: url("/images/bghero.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .container-callact > h2 {
+        font-size: 3.1em;
+        text-align: left;
+        padding: 0 5%;
+        width: 50%;
+    }
+
+    .button-containerv {
+        align-items: flex-end;
+        margin: 0 5%;
+        width: 50%;
+    }
+}

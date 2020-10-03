@@ -1,0 +1,64 @@
+.feature {
+    margin: 30px 0 0;
+}
+
+.feature-icon > img {
+    height: 70px;
+}
+
+.feature-icon {
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 24px;
+    color: #17252A;
+    text-align: center;
+    margin: 10px;
+}
+
+.feature p {
+    color: #2B7A78;
+    text-align: center;
+    margin: 0 20px 25px;
+}
+
+@media screen and (min-width: 600px) {
+    .feature {
+        margin: 50px 0 0;
+    }
+
+    .feature-icon > img {
+        height: 100px;
+    }
+
+    .feature h3 {
+        font-size: 30px;
+        margin: 15px;
+    }
+
+    .feature p {
+        font-size: 1.3em;
+        margin: 0 60px 25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .feature {
+        margin: 30px 0 0;
+    }
+
+    .feature-icon > img {
+        height: 70px;
+    }
+
+    .feature h3 {
+        font-size: 28px;
+        margin: 15px;
+    }
+
+    .feature p {
+        font-size: 1em;
+        margin: 0 60px 25px;
+    }
+}

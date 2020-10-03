@@ -1,0 +1,37 @@
+.flatmate-content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flatmate-banner {
+    width: 45%;
+}
+
+.flatmate-banner > h4 {
+    font-size: 1em;
+    margin: 0 0 10px;
+    color: #2B7A78;
+}
+
+.flatmate-banner > h1 {
+    font-size: 32px;
+    color: white;
+    background: #17252A;
+    border-radius: 15px;
+    padding: 20px 50px;
+    margin: 0 0 10px;
+}
+
+.flatmate-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flatmate-buttons > input {
+    border: none;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    background: #2B7A78;
+    color: white;
+}

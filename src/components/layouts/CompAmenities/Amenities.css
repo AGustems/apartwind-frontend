@@ -1,0 +1,60 @@
+.container-amenities {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amenity-feature {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+.amenity-feature > h6 {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: normal;
+    color: #2B7A78;
+}
+
+.list-icon {
+    margin-right: 10px;
+}
+
+.list-check {
+    color: green;
+    margin: 0 10px;
+}
+
+.list-cross {
+    color: red;
+    margin: 0 10px;
+}
+
+@media screen and (min-width: 600px) {
+    .amenity-feature > h6 {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .flatmate-banner {
+        width: 37%;
+    }
+
+    .flatmate-banner > h4 {
+        font-size: 1.3em;
+    }
+
+    .flatmate-banner > h1 {
+        font-size: 3.3em;
+    }
+
+    .flatmate-buttons > input {
+        width: 60px;
+        height: 60px;
+        font-size: 2em;
+    }
+}

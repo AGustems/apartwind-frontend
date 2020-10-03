@@ -1,0 +1,23 @@
+.delete-account {
+    border: none;
+    border-radius: 20px;
+    background-color: #f74d4d;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.footer-text {
+    margin-top: 20px;
+    padding-bottom: 22px;
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-text{
+        position: absolute;
+        bottom: 5%;
+        width:50%;
+    }
+}

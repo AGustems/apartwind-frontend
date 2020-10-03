@@ -1,0 +1,28 @@
+.offers {
+    background: url("/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+
+.offers-controllers {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 2%;
+    color: white;
+    background-color: #17252A;
+}
+
+.offers-controllers > h4 {
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.offers-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

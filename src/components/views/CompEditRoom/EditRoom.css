@@ -1,0 +1,20 @@
+.property-content {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.container-roomedit h4 {
+    margin: 25px 0 5px 10px;
+    text-align: left;
+}
+
+.container-roomedit p {
+    margin: 5px 0;
+    text-align: left;
+    font-size: 0.8em;
+}
+
+.container-roomedit>.input-text-bg{
+    width:100%;
+}

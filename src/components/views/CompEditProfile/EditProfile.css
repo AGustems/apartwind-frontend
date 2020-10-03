@@ -1,0 +1,73 @@
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-form > label {
+    width: 80%;
+    text-align: left;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.edit-form > .input-text-bg {
+    margin-top: 6px;
+    width:85%;
+}
+
+.edit-form > textarea {
+    margin-top: 6px;
+    width: 85%;
+}
+
+.edit-submit {
+    margin-top: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #DEF2F1;
+    color: #2B7A78;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.edit-char {
+    margin: 0;
+    padding: 3% 0;
+    color: #2B7A78;
+    list-style: none;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+.edit-char button {
+    border: none;
+    border-radius: 20px;
+    background-color: #DEF2F1;
+    color: #2B7A78;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.char-form{
+    width: 85%;
+}
+
+@media screen and (min-width: 600px){
+    .edit-char {
+        columns: 3;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .edit-char {
+        columns: 4;
+        -webkit-columns: 4;
+        -moz-columns: 34;
+    }
+}
